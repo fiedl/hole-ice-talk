@@ -1,0 +1,34 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{How does it work?}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \only<1>{\image{algorithm-trajectory}}
+      \only<2>{\image{distance-correction}}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \begin{itemize}
+        \item<1> In photon propagation simulation, one simulation step consists of everything between two scatterings, i.a.
+          \begin{itemize}
+            \item randomizing the distance to the next scattering point
+            \item randomizing the scattering angle
+            \item moving the photon to the next scattering point
+            \item checking for absorption
+            \item checking for detection at a DOM
+          \end{itemize}
+
+        \item<2> Hole ice simulation adds another task to each simulation step:
+          \begin{itemize}
+            \item Calculate the portion of the photon trajectory in the step that runs through hole ice
+            \item Correct the distance to the next scattering point for the changed ice properties within the hole ice
+            \item Correct the distance to absorption as well
+          \end{itemize}
+      \end{itemize}
+
+    \end{column}
+  \end{columns}
+  \source{\url{https://github.com/fiedl/hole-ice-study#how-does-it-work}}
+
+\end{frame}

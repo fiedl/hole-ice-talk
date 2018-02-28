@@ -1,0 +1,74 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Scattering example}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \only<1>{\image{example-sca1-0-steamshovel}}
+      \only<2>{\image{example-sca0-1-steamshovel}}
+      \only<3>{\image{example-sca0-01-steamshovel}}
+      \only<4>{\image{example-sca0-001-steamshovel}}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      Shoot photons onto the DOM. Top view.
+
+      \newcommand\scatteringdenominator{\only<1>{1}\only<2>{10}\only<3>{100}\only<4>{1000}\xspace}
+
+      \only<1>{No hole ice at all.}
+      \only<2->{Change the scattering length inside the hole ice to be 1/\scatteringdenominator of the scattering length outside.}
+
+      \begin{equation*}\begin{align}
+        \lambda_\text{sca,hole-ice} &= \frac{1}{\scatteringdenominator}\, & \lambda_\text{sca,bulk} \\
+        \lambda_\text{abs,hole-ice} &= & \lambda_\text{sca,bulk}
+      \end{align}\end{equation*}
+
+      \begin{onlyenv}<1>
+        \begin{smallbash}
+          $ICESIM/env-shell.sh
+          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=1.0 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e2 --number-of-runs=1 --number-of-parallel-runs=1 --save-photon-paths --cpu
+          steamshovel tmp/propagated_photons.i3
+        \end{smallbash}
+      \end{onlyenv}
+
+      \begin{onlyenv}<2>
+        \begin{smallbash}
+          $ICESIM/env-shell.sh
+          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=0.1 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e2 --number-of-runs=1 --number-of-parallel-runs=1 --save-photon-paths --cpu
+          steamshovel tmp/propagated_photons.i3
+        \end{smallbash}
+      \end{onlyenv}
+
+      \begin{onlyenv}<3>
+        \begin{smallbash}
+          $ICESIM/env-shell.sh
+          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=0.01 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e2 --number-of-runs=1 --number-of-parallel-runs=1 --save-photon-paths --cpu
+          steamshovel tmp/propagated_photons.i3
+        \end{smallbash}
+      \end{onlyenv}
+
+      \begin{onlyenv}<4>
+        \begin{smallbash}
+          $ICESIM/env-shell.sh
+          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=0.001 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e2 --number-of-runs=1 --number-of-parallel-runs=1 --save-photon-paths --cpu
+          steamshovel tmp/propagated_photons.i3
+        \end{smallbash}
+      \end{onlyenv}
+
+    \end{column}
+  \end{columns}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study#asymmetry-example}}
+
+\end{frame}
+
+\note[itemize]{
+  \item In data points, one sees upper curve and lower curve.
+  \item Because of the asymmetry, on one way, the distance through the hole ice is smaller, on the other way, larger.
+}

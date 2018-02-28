@@ -1,0 +1,32 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Point source example}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{point-source-example}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      For each angle $\eta$, shoot photons \textbf{from a single point} onto the DOM and count hits.
+      \small{Hole-ice radius: 30\cm}
+
+      \begin{equation*}\begin{align}
+        \lambda_\text{sca,hole-ice} &= \frac{1}{10}\, & \lambda_\text{sca,bulk} \\
+        \lambda_\text{abs,hole-ice} &= & \lambda_\text{sca,bulk}
+      \end{align}\end{equation*}
+
+      \begin{smallbash}
+        $ICESIM/env-shell.sh
+        cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+        ./run.rb --scattering-factor=0.1 --absorption-factor=0.1 --distance=1.0 --number-of-photons=1e5 --angles=0,10,20,30,32,45,60,75,90,105,120,135,148,160,170,180] --number-of-runs=2 --number-of-parallel-runs=2
+        open results/current/plot_with_reference.png
+      \end{smallbash}
+
+    \end{column}
+  \end{columns}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study#angular-acceptance-example}}
+
+\end{frame}
+

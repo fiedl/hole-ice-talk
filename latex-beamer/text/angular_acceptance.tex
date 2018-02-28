@@ -1,0 +1,41 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Angular acceptance}
+
+  For each angle $\eta$, shoot photons onto the DOM and count hits.
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{angular-acceptance}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \only<1>{
+        \begin{figure}
+          \image{ice-paper-fig7}
+          \caption*{Angular acceptance \textit{reference curves}. The nominal model is based on lab measurement, the hole ice curve on previous simulations.}
+        \end{figure}
+      }
+
+      \begin{onlyenv}<2>
+        \image{angular-acceptance-example-plane-waves}
+
+        \begin{smallbash}
+          $ICESIM/env-shell.sh; cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=0.1 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e5 --angles=0,10,20,30,32,45,60,75,90,105,120,135,148,160,170,180] --number-of-runs=2 --number-of-parallel-runs=2
+          open results/current/plot_with_reference.png
+        \end{smallbash}
+      \end{onlyenv}
+    \end{column}
+  \end{columns}
+
+  \source{Image: Martin Rongen, Calibration Call 2015-11-06, DARD Update, Slide 9 \\ Plot: \href{https://arxiv.org/abs/1301.5361}{Measurement of South Pole ice transparency with the IceCube LED calibration system}, 2013, figure 7. See also: \url{https://github.com/fiedl/hole-ice-study/issues/10}}
+
+\end{frame}
+
+\note[itemize]{
+  \item One way to compare the new simulation to existing results, is to plot angular-acceptance curves.
+  \item I.e. for each angle $\eta$, which is the angle between the starting direction of the photon and the column axis, shoot photons onto the DOM, propagate them in simulation and count hits.
+  \item The current hole-ice approximations are convolutions onto the DOM angular acceptance.
+  \item This is an example using the new hole-ice simulation with arbitrary ice parameters (data points) compared to the old reference curve (red).
+}

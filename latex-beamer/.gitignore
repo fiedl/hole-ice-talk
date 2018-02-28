@@ -6,3 +6,6 @@
 *.synctex.gz
 *.toc
 *.lb
+*.pygtex
+_minted*
+*.vrb
