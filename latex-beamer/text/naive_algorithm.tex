@@ -1,0 +1,26 @@
+\begin{frame}[fragile]{Naive propagation algorithm}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{photon-trajectory-naive-ieph6Bie}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+
+      Naive algorithm:
+
+      \begin{itemize}
+        \item Propagate photon a tiny distance
+        \item At current position:
+        \begin{itemize}
+          \item Check for random scattering
+          \item Check for random absorption
+          \item Check for collision with DOM
+        \end{itemize}
+
+        \follows \textbf{Hole ice is easy} because all ice properties can be locally evaluated
+        \follows But \textbf{performance is bad} because there are lots of simulation steps even for long distances without interaction
+      \end{itemize}
+
+    \end{column}
+  \end{columns}
+\end{frame}

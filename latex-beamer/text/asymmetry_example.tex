@@ -5,13 +5,16 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
 
-      \only<1>{\image{asymmetry-example-angular-acceptance}}
-      \only<2>{\image{asymmetry-example-steamshovel}}
+      \only<1>{\image{asymmetry-example-steamshovel}}
+      \only<2>{\image{asymmetry-example-angular-acceptance-with-comment}}
 
     \end{column}
     \begin{column}{0.5\textwidth}
 
-      For each angle $\eta$, shoot photons from planes onto the DOM and count hits.
+      \only<1>{For angle $\eta = \pi / 2$,}
+      \only<2>{For each angle $\eta \in [0;2\,\pi[$,}
+      shoot photons from planes onto the DOM and count hits.
+
       \small{Hole-ice radius: 30\cm}
 
       \begin{equation*}\begin{align}
@@ -22,15 +25,6 @@
       The \textbf{hole-ice is shifted in x-direction against the DOM} position by 20\cm.
 
       \begin{onlyenv}<1>
-        \begin{smallbash}
-          $ICESIM/env-shell.sh
-          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
-          ./run.rb --scattering-factor=0.1 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e5 --angles=0,10,20,30,40,50,60,70,90,120,140,150,160,170,190,200,210,220, 240,260,270,290,300,310,320,330,340,350 --number-of-runs=2 --number-of-parallel-runs=2 --cylinder-shift=0.2
-          open results/current/plot_with_reference.png
-        \end{smallbash}
-      \end{onlyenv}
-
-      \begin{onlyenv}<2>
         \begin{bash}
           $ICESIM/env-shell.sh
           cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
@@ -39,10 +33,19 @@
         \end{bash}
       \end{onlyenv}
 
+      \begin{onlyenv}<2>
+        \begin{smallbash}
+          $ICESIM/env-shell.sh
+          cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+          ./run.rb --scattering-factor=0.1 --absorption-factor=1.0 --distance=1.0 --plane-wave --number-of-photons=1e5 --angles=0,10,20,30,40,50,60,70,90,120,140,150,160,170,190,200,210,220, 240,260,270,290,300,310,320,330,340,350 --number-of-runs=2 --number-of-parallel-runs=2 --cylinder-shift=0.2
+          open results/current/plot_with_reference.png
+        \end{smallbash}
+      \end{onlyenv}
+
     \end{column}
   \end{columns}
 
-  \source{\url{https://github.com/fiedl/hole-ice-study#asymmetry-example}}
+  \source{\url{https://github.com/fiedl/hole-ice-study#asymmetry-example}, \url{https://github.com/fiedl/hole-ice-study/issues/8}}
 
 \end{frame}
 

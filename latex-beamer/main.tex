@@ -8,7 +8,7 @@
 \geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 
 \title{Hole-ice simulation in clsim}
-\subtitle{Icecube calibration call}
+\subtitle{Icecube calibration call, 2018-03-02}
 \date{2018-03-02}
 
 \author[Sebastian Fiedlschuster \texttt{<sebastian@fiedlschuster.de>}]{Sebastian Fiedlschuster \\ \tiny\texttt{sebastian@fiedlschuster.de}}
@@ -17,7 +17,8 @@
 \newif\ifplacelogo % create a new conditional
 \placelogotrue % set it to true
 \logo{\ifplacelogo
-  \raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube}}\hspace{0.3cm}
+  %\raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube}}\hspace{0.3cm}
+  \raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube-logo-side-text}}\hspace{0.3cm}
   \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/ecap}}\hspace{0.3cm}
   \includegraphics[height=0.75cm]{img/Logo_FAU_DinA4_RGB}
 \fi}
@@ -37,23 +38,37 @@
 % https://tex.stackexchange.com/a/225582/70789
 
 \include{text/titlepage}
+
+\section{Introduction}
 \include{text/motivation}
 \include{text/prefix}
 \placelogofalse
 
-\section{Introduction}
-
 \section{What has been done}
+%\include{text/naive_algorithm}
 \include{text/how_does_it_work}
 \include{text/scattering_example}
 \include{text/angular_acceptance}
 
 \section{Examples}
 \include{text/instant_absorption}
-\include{text/point_source_example}
+\include{text/fixed_source_example}
 \include{text/plane_wave_example}
 \include{text/asymmetry_example}
 
-\section{Outlook: What is possible}
+\section{Outlook}
+
+\begin{frame}{Outlook: What is possible}
+  \begin{itemize}
+    \item Direct detection
+    \item Separate positions for hole-ice cylinders
+    \item Nested columns
+    \item Cables as cylinder partials
+  \end{itemize}
+\end{frame}
+
+\include{text/what_is_missing}
+\include{text/thanks}
+
 
 \end{document}
