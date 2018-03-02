@@ -2,16 +2,17 @@
 
 \documentclass[green, 12pt]{beamer}
 
-\setbeameroption{show notes}
+%\setbeameroption{show notes}
 
 \newlength{\mypaperwidth}\setlength{\mypaperwidth}{200mm}
-\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
+%\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
+\geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
 \title{Hole-ice simulation in clsim}
 \subtitle{Icecube calibration call, 2018-03-02}
-\date{2018-03-02}
+\date{Document 2018-hie3Ahho, 2018-03-02 \\ \tiny{Print version: \today}}
 
-\author[Sebastian Fiedlschuster \texttt{<sebastian@fiedlschuster.de>}]{Sebastian Fiedlschuster \\ \tiny\texttt{sebastian@fiedlschuster.de}}
+\author[Sebastian Fiedlschuster \texttt{<sebastian@fiedlschuster.de>}]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian@fiedlschuster.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
@@ -25,6 +26,7 @@
 
 \input{lib/graphics}
 \input{lib/listings}
+\input{lib/tabular}
 \input{lib/beamer}
 \input{lib/utf8}
 \input{lib/units}
@@ -40,35 +42,47 @@
 \include{text/titlepage}
 
 \section{Introduction}
-\include{text/motivation}
-\include{text/prefix}
+  \include{text/motivation}
+  \include{text/prefix}
 \placelogofalse
 
 \section{What has been done}
-%\include{text/naive_algorithm}
-\include{text/how_does_it_work}
-\include{text/scattering_example}
-\include{text/angular_acceptance}
+\subsection{How does it work}
+  \include{text/how_does_it_work}
+\subsection{How does it look like}
+  \include{text/scattering_example}
+\subsection{How to compare it}
+  \include{text/angular_acceptance}
 
 \section{Examples}
-\include{text/instant_absorption}
-\include{text/fixed_source_example}
-\include{text/plane_wave_example}
-\include{text/asymmetry_example}
+\subsection{Instant absorption}
+  \include{text/instant_absorption}
+\subsection{Fixed source vs. plane wave source}
+  \include{text/fixed_source_example}
+  \include{text/plane_wave_example}
+\subsection{Asymmetry: Shift hole ice vs DOM}
+  \include{text/asymmetry_example}
 
 \section{Outlook}
+\subsection{Separate cylinder positions}
+  \include{text/separate_cylinder_positions}
+\subsection{Cable shadows}
+  \include{text/cable_shadows}
+\subsection{Nested cylinders}
+  \include{text/nested_cylinders}
+\subsection{Direct detection}
+  \include{text/direct_detection}
 
-\begin{frame}{Outlook: What is possible}
-  \begin{itemize}
-    \item Direct detection
-    \item Separate positions for hole-ice cylinders
-    \item Nested columns
-    \item Cables as cylinder partials
-  \end{itemize}
-\end{frame}
+\subsection{Work to be done}
+  \include{text/what_is_missing}
+  \include{text/martins_wishlist}
 
-\include{text/what_is_missing}
 \include{text/thanks}
 
+\appendix
+\section{Backup slides}
+\include{text/naive_algorithm}
+\include{text/coordinates_vs_vectors_bug}
+\include{text/absorption_after_5cm}
 
 \end{document}

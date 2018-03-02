@@ -1,0 +1,35 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Direct detection}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \image{direct-detection}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \begin{itemize}
+        \item The DOM looks downwards by design
+        \item Currently, the hit position is not used when determining DOM acceptance, just the photon direction when hitting the DOM (\textit{DOM angular acceptance})
+        \item Direct detection: Accept all hits below the waist band, reject all others
+        \item Direct detection is easy with clsim
+          \begin{itemize}
+            \item Hit position is known and guaranteed to be on the DOM sphere
+            \item Idea: Accept hits depending on $z$ of the hit position
+            \item Patch is a couple of lines: \href{https://github.com/fiedl/clsim/commit/96a2e3fa1f9bb283b1b98f351e1a131b376a72b8}{fiedl/clsim@96a2e3f}
+          \end{itemize}
+        \item Still work to be done:
+          \begin{itemize}
+            \item Implement a switch for direct detection vs. DOM angular acceptance
+                \tiny \url{https://github.com/fiedl/hole-ice-study/issues/32} \small
+          \end{itemize}
+      \end{itemize}
+
+
+    \end{column}
+  \end{columns}
+
+  \source{Image: Martin Rongen, \textit{Status and future of SpiceHD & DARD}, 2017, Slide 17, \\ See also: \url{https://github.com/fiedl/hole-ice-study/issues/32}}
+\end{frame}

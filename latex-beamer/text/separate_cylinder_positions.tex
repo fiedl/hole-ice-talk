@@ -1,0 +1,39 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Separate hole-ice cylinder positions}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \image{cylinder-shift-steamshovel}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \begin{itemize}
+        \item Each string can have its own hole-ice cylinder configuration
+          \begin{itemize}
+            \item cylinder position
+            \item cylinder radius
+            \item DOM positions --- DOMs may not be perfectly centred relative to the hole ice
+          \end{itemize}
+
+        \item Currently configurable in Geometry frame. \\
+
+          \textbf{Q: Is there a better place to configure this?}
+          \note{Cylinder configuration needs to be accessible by the steamshovel artist.}
+
+        \item Still work to be done:
+          \begin{itemize}
+            \item Ice properties need to be configurable for each cylinder:
+                \tiny \url{https://github.com/fiedl/hole-ice-study/issues/9} \small
+          \end{itemize}
+      \end{itemize}
+
+
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+

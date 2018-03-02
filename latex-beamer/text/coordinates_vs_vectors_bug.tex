@@ -1,0 +1,24 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Coordinates-vs-vectors bug}
+
+  Scenario: Instant absorption. Top view.
+  Mathematics of intersection calculations and starting conditions are the same in both figures.
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      Before: Treating coordinates as separate variables
+      \image{coordinates-vs-vectors-bug-before}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      After: Treating vectors as opencl-native vectors
+      \image{coordinates-vs-vectors-bug-after}
+
+    \end{column}
+  \end{columns}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/28}}
+\end{frame}

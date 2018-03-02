@@ -1,0 +1,29 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Scattering example}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \image{abs-len-about-5cm-sca-0-001-steamshovel}
+
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+
+      \begin{itemize}
+        \item Hole-ice absorption length: about 5\cm
+        \item Hole-ice scattering length factor: 0.001
+      \end{itemize}
+
+      \begin{smallbash}
+        $ICESIM/env-shell.sh
+        cd $HOLE_ICE_STUDY/scripts/FiringRange
+        ./run.rb --scattering-factor=0.001 --absorption-factor=0.00033 --distance=1.0 --number-of-photons=100 --number-of-runs=1 --number-of-parallel-runs=1 --save-photon-paths --cpu --plane-wave
+        steamshovel tmp/propagated_photons.i3
+      \end{smallbash}
+
+    \end{column}
+
+  \end{columns}
+\end{frame}

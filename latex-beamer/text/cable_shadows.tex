@@ -1,0 +1,40 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Cable shadows}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \image{cable-shadow-steamshovel}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \begin{itemize}
+        \item Cables can be modelled as separate cylinders
+          \begin{itemize}
+            \item for each DOM separate position
+            \item 1\,m height
+            \item configured for instant absorption
+          \end{itemize}
+        \item This image:
+          \begin{itemize}
+            \item DOM radius: 16.5\cm
+            \item bubble-column radius: 8.0\cm
+            \item cable radius: 2.0\cm
+          \end{itemize}
+        \item Still work to be done:
+          \begin{itemize}
+            \item Ice properties need to be configurable for each cylinder:
+                \tiny \url{https://github.com/fiedl/hole-ice-study/issues/9} \small
+            \item z-range needs to be implemented in hole-ice code:
+                \tiny \url{https://github.com/fiedl/hole-ice-study/issues/34} \small
+          \end{itemize}
+      \end{itemize}
+
+
+    \end{column}
+  \end{columns}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/35}}
+\end{frame}
