@@ -1,0 +1,37 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Two hole-ice algorithms}
+
+  \begin{tabelle}{l|L|L}
+    & \textbf{Algorithm (a)} & \textbf{Algorithm (b)} \\
+    \hline
+    Approach
+      & Leave clsim medium propagation as it is and add \textbf{hole-ice effects as correction} afterwards
+      & Unify clsim medium propagation through layers and hole ice: Treat them as \textbf{generic medium changes} \\
+    Hole-ice properties
+      & defined relative to bulk-ice properties
+      & defined absolute \\
+    Pros
+      &
+        \begin{itemize}
+          \item[+] Small surface area of hole-ice code, i.e. well testable through unit tests
+          \item[+] Standard clsim almost untouched
+        \end{itemize}
+      &
+        \begin{itemize}
+          \item[+] Supports nested cylinders and cables
+        \end{itemize}
+      \\
+    Cons
+      &
+        \begin{itemize}
+          \item[--] Current understanding of hole-ice suggests defining hole-ice properties absolute rather than relative
+        \end{itemize}
+      &
+        \begin{itemize}
+          \item[--] Needed rewrite of clsim's medium-propagation code
+          \item[--] Ice tilt and ice anisotropy not re-implemented, yet
+        \end{itemize}
+  \end{tabelle}
+
+\end{frame}
