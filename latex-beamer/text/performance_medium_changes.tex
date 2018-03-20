@@ -1,0 +1,29 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Performance}
+
+  Time measurement: Propagating $10^5$ photons on CPU
+
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \image{performance-medium-changes}
+
+      \begin{smallbash}
+        $ICESIM/env-shell.sh
+        cd $HOLE_ICE_STUDY/scripts/AngularAcceptance
+        time ./run.rb --distance=1.0 --number-of-runs=1 --number-of-parallel-runs=1 --cpu --angle=45 --plane-wave --number-of-photons=1e5
+      \end{smallbash}
+
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \item Medium propagation features (hole ice, layers) have no measurable performance impact.
+        \item Hole-ice-2017 and hole-ice-2018 algorithms have no measurable performance impact for scattering lengths comparable to bulk-ice scattering ($\lambda_s = 20\m$).
+        \item Performance drop can be seen when lowering the scattering length, i.e. increasing the number of simulation steps ($\lambda_s = 3\mm$).
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\source{https://github.com/fiedl/hole-ice-study/issues/49}
+
+\end{frame}
