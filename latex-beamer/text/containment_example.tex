@@ -1,0 +1,71 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Instant absorption with nested cylinders}
+
+  The inner cylinder is configured for small scattering length, the outer cylinder for instant absorption. \\
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \image{containment-example}
+
+      With outer cylinder configured for instant absorption
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+
+      \only<1>{
+        \image{containment-example-2d}
+
+        Top view
+      }
+      \only<2>{
+        \image{containment-example-without-outer-cylinder}
+
+        Without the outer cylinder
+      }
+
+    \end{column}
+  \end{columns}
+
+  % Visualizing instant absorption with clsim and steamshovel.
+  % \small{DOM radius: 10\cm, hole ice radius: 30\cm}
+  %
+  % \begin{onlyenv}<1>
+  %   \begin{sideimage}{img/instant-absorption-3d}
+  %     Photon point source, 3d view
+  %
+  %     \begin{bash}
+  %       $ICESIM/env-shell.sh
+  %       cd $HOLE_ICE_STUDY/scripts/FiringRange
+  %       ./run.rb \
+  %           --scattering-factor=1.0 --absorption-factor=0.0 \
+  %           --distance=1.0 \
+  %           --number-of-photons=1e3 --angle=90 \
+  %           --number-of-runs=1 --number-of-parallel-runs=1 \
+  %           --save-photon-paths --cpu
+  %       steamshovel tmp/propagated_photons.i3
+  %     \end{bash}
+  %   \end{sideimage}
+  % \end{onlyenv}
+  %
+  % \begin{onlyenv}<2>
+  %   \begin{sideimage}{img/instant-absorption-top}
+  %     Plane wave photon source, top view
+  %
+  %     \begin{bash}
+  %       $ICESIM/env-shell.sh
+  %       cd $HOLE_ICE_STUDY/scripts/FiringRange
+  %       ./run.rb \
+  %           --scattering-factor=1.0 --absorption-factor=0.0 \
+  %           --distance=1.0 --plane-wave \
+  %           --number-of-photons=1e3 --angle=90 \
+  %           --number-of-runs=1 --number-of-paralle-runs=1 \
+  %           --cpu --save-photon-paths
+  %       steamshovel tmp/propagated_photons.i3
+  %     \end{bash}
+  %   \end{sideimage}
+  % \end{onlyenv}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/47}}
+\end{frame}
