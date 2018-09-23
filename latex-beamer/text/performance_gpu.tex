@@ -1,0 +1,18 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Performance on GPU}
+  \her{Performance of one simulation step} depends on optimizations: \\
+
+  \image{profiling-paz4Eig6}
+
+  \bigskip
+
+  \her{Total performance} depends on number of scatters: \\
+
+  Standard clsim with hole-ice approximation: 11 mins \\
+  New algorithm, no hole ice: 10 mins \\
+  New algorithm, about H2 hole ice: 15 mins % r = 36cm, esca = 1/10 bulk
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/69}}
+
+\end{frame}

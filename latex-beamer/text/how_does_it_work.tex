@@ -4,31 +4,22 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \only<1>{\image{algorithm-trajectory}}
-      \only<2>{\image{distance-correction}}
+      \only<1>{\image{how-does-it-work-001}}
+      \only<2>{\image{how-does-it-work-002}}
+      \only<3>{\image{how-does-it-work-003}}
+      \only<4>{\image{how-does-it-work-004}}
     \end{column}
     \begin{column}{0.5\textwidth}
 
       \begin{itemize}
-        \item<1> In current photon propagation simulation, one simulation step consists of everything between two scatterings, i.a.
-          \begin{itemize}
-            \item randomizing the distance to the next scattering point
-            \item randomizing the scattering angle
-            \item moving the photon to the next scattering point
-            \item checking for absorption
-            \item checking for detection at a DOM
-          \end{itemize}
-
-        \item<2> Hole ice simulation adds another task to each simulation step:
-          \begin{itemize}
-            \item Calculate the portion of the photon trajectory in the step that runs through hole ice
-            \item Correct the distance to the next scattering point for the changed ice properties within the hole ice
-            \item Correct the distance to absorption as well
-          \end{itemize}
+        \item Photon scattering points $A$ and $B$
+        \item<1> \her{Naive algorithm}: Propagate photon small distance $\delta x$ in each simulation step and randomize whether the photon will scatter in this step (easy to implement local properties)
+        \item<2> \her{Standard clsim} algorithm: Randomize geometric distance to next scattering point and propagate from $A$ to $B$ in one simulation step
+        \item<3> \her{Ice layers} in clsim: Randomize number of scattering lengths between $A$ and $B$ as budget and calculate geometric distance by spending the budget over the ice layers
+        \item<4> \her{New: Hole ice} in clsim: Generalize budget algorithm to support cylinders (with distinct scattering and absorption lengths) in addition to ice layers.
       \end{itemize}
 
     \end{column}
   \end{columns}
-  \source{\url{https://github.com/fiedl/hole-ice-study#how-does-it-work}}
 
 \end{frame}

@@ -3,15 +3,15 @@
 \documentclass[green, 12pt]{beamer}
 
 % https://gist.github.com/andrejbauer/ac361549ac2186be0cdb
-\setbeameroption{show notes}
+%\setbeameroption{show notes}
 
 \newlength{\mypaperwidth}\setlength{\mypaperwidth}{200mm}
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
 \title{Hole-ice simulation in clsim}
-%\subtitle{Icecube calibration call, 2018-03-02}
-\date{2018-03-23 \\ \vspace*{2mm} \tiny{Document 2018-hie3Ahho}}
+\subtitle{IceCube Stockholm Collaboration Meeting 2018}
+\date{2018-09-26 \\ \vspace*{2mm} \tiny{Document 2018-oThei5ei}}
 
 \author[Sebastian Fiedlschuster \texttt{<sebastian@fiedlschuster.de>}]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian@fiedlschuster.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
@@ -42,52 +42,60 @@
 
 \include{text/titlepage}
 
+\placelogofalse
+
 \section{Introduction}
   \include{text/motivation}
   \include{text/prefix}
-\placelogofalse
 
-\section{What has been done}
-\subsection{How does it work}
-  \include{text/how_does_it_work}
-  \include{text/hole_ice_2017_vs_2018}
-\subsection{How does it look like}
-  \include{text/scattering_example}
-\subsection{How to compare it}
-  \include{text/angular_acceptance}
 
-\section{Examples}
-\subsection{Instant absorption}
-  \include{text/instant_absorption}
-  \include{text/containment_example}
-\subsection{Fixed source vs. plane wave source}
-  \include{text/fixed_source_example}
-  \include{text/plane_wave_example}
-\subsection{Asymmetry: Shift hole ice vs DOM}
-  \include{text/asymmetry_example}
+  \section{Direct hole-ice simulation}
+  \subsection{How does it work}
+    \include{text/how_does_it_work}
 
-\section{Outlook}
-\subsection{Separate cylinder positions}
-  \include{text/separate_cylinder_positions}
-\subsection{Cable shadows}
-  \include{text/cable_shadows}
-\subsection{Nested cylinders}
-  \include{text/nested_cylinders}
-\subsection{Direct detection}
-  \include{text/direct_detection}
+  \section{What can it do}
+  \subsection{Separate cylinder positions}
+    \include{text/separate_cylinder_positions}
+  \subsection{Cable shadows}
+    \include{text/cable_shadows}
+  \subsection{Nested cylinders}
+    \include{text/nested_cylinders}
+    \include{text/nested_shifted_cylinders_with_cable}
+  \subsection{Direct detection}
+    \include{text/direct_detection}
 
-\subsection{Work to be done}
-  \include{text/what_is_missing}
-  \include{text/martins_wishlist}
+  \section{Some early results}
+  \subsection{How to compare it}
+    \include{text/angular_acceptance}
+    \include{text/angular_acceptance_for_different_parameters} % including systematics
+  \subsection{Comparison to ppc simulation}
+    \include{text/ppc_comparison}
+  \subsection{Comparison to H2 hole-ice model}
+    \include{text/h2_comparison}
+  \subsection{Comparison of parameters from calibration measurements}
+    \include{text/measurement_comparison}
+  \subsection{Direct cable simulation}
+    \include{text/cable_angular_acceptance}
+    \include{text/cable_flasher}
+
+  \section{Work to be done}
+    \include{text/what_is_missing}
+    \include{text/martins_wishlist}
 
 \include{text/thanks}
 
 \appendix
 \section{Backup slides}
 \include{text/performance_medium_changes}
-\include{text/performance_cluster}
-\include{text/naive_algorithm}
-\include{text/coordinates_vs_vectors_bug}
+\include{text/performance_gpu}
+\include{text/scattering_example}
+\include{text/instant_absorption}
+\include{text/containment_example}
 \include{text/absorption_after_5cm}
+\include{text/cross_checks}
+\include{text/asymmetry_example}
+\include{text/angular_acceptance_methods_comparison}
+\include{text/flasher_parameter_scan}
+\include{text/coordinates_vs_vectors_bug}
 
 \end{document}

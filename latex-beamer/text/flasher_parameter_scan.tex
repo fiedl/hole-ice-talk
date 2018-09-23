@@ -1,0 +1,34 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Flasher parameter scan}
+  \begin{column}{0.5\textwidth}
+    \image{flasher-scenario}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \image{flasher-contours-59}
+  \end{column}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/59}. Image based on \url{https://wiki.icecube.wisc.edu/index.php/File:Distances.i86.jpg}.}
+\end{frame}
+
+\begin{frame}[fragile]{Flasher parameter scan vs. SpiceHD scan}
+  \begin{column}{0.5\textwidth}
+    SpiceHD with ppc: \medskip
+
+    \image{flasher-contours-martin}
+
+    DOM positions are fit parameters.
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    clsim with direct hole ice: \medskip
+
+    \image{flasher-same-color-axis-as-spicehd}
+
+    All DOMs perfectly centered within hole ice.
+  \end{column}
+
+  \bigskip
+  Mind systematics: DOM displacement does account for the observed scattering-length factor $\frac{1}{3}$ for the hole-ice radius of 1.8 dom radii (right-hand side of the plot).
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/106}. }
+\end{frame}

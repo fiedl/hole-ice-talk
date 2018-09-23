@@ -2,10 +2,10 @@
 
 \begin{frame}[fragile]{Performance}
 
-  Time measurement: Propagating $10^5$ photons on CPU
+  Time measurement: Propagating $10^5$ photons on CPU \medskip
 
   \begin{columns}
-    \begin{column}{0.6\textwidth}
+    \begin{column}{0.7\textwidth}
       \image{performance-medium-changes}
 
       \begin{smallbash}
@@ -15,10 +15,9 @@
       \end{smallbash}
 
     \end{column}
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.3\textwidth}
       \begin{itemize}
-        \item Medium propagation features (hole ice, layers) have no measurable performance impact.
-        \item Hole-ice-2017 and hole-ice-2018 algorithms have no measurable performance impact for scattering lengths comparable to bulk-ice scattering ($\lambda_s = 20\m$).
+        \item Medium propagation features (hole ice, layers) have no measurable performance impact for scattering lengths comparable to bulk-ice scattering ($\lambda_s = 20\m$).
         \item Performance drop can be seen when lowering the scattering length, i.e. increasing the number of simulation steps ($\lambda_s = 3\mm$).
       \end{itemize}
     \end{column}
