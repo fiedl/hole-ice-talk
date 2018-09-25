@@ -17,8 +17,8 @@
       \begin{itemize}
         \item Photon scattering points $A$ and $B$
         \item<1> \her{Naive algorithm}: Propagate photon small distance $\delta x$ in each simulation step and randomize whether the photon will scatter in this step (easy to implement local properties)
-        \item<2> \her{Standard clsim} algorithm: Randomize geometric distance to next scattering point and propagate from $A$ to $B$ in one simulation step
-        \item<3> \her{Ice layers} in clsim: Randomize number of scattering lengths between $A$ and $B$ as budget and calculate geometric distance by spending the budget over the ice layers
+        \item<2> \her{Faster algorithm}: Randomize geometric distance to next scattering point and propagate from $A$ to $B$ in one simulation step
+        \item<3> \her{Ice layers in clsim}: Randomize number of scattering lengths between $A$ and $B$ as budget and calculate geometric distance by spending the budget over the ice layers
         \item<4> \her{New: Hole ice} in clsim: Generalize budget algorithm to support cylinders (with distinct scattering and absorption lengths) in addition to ice layers.
       \end{itemize}
 
