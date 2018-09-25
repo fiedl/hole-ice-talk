@@ -1,0 +1,30 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{DOM oversizing with hole ice?}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{overlayarea}{\textwidth}{\textheight}
+        \vspace*{2cm}
+        \only<1>{\image{dom-oversizing-001}}
+        \only<2>{\image{dom-oversizing-002}}
+        \only<3>{\image{dom-oversizing-003}}
+        \only<4>{\image{dom-oversizing-004}}
+        \only<5>{\image{dom-oversizing-005}}
+      \end{overlayarea}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Consider a DOM displaced relative to the bubble column, such that
+        \begin{itemize}
+          \item a photon from one direction would hit the DOM,
+          \item<2-> a photon from another direction might be deflected by the bubble column.
+        \end{itemize}
+        \item<3-> Consider a sphere with arbitrary radius, e.g. 5\m or 10\m.
+        \item<4-> In detailled simulations with direct propagation, record impact position, impact direction, hole-ice displacement, hole-ice azimuthal position, and count hits.
+        \item<5> In simulations without direct propagation, just intersect the outer sphere and use the hit probability from the table.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
