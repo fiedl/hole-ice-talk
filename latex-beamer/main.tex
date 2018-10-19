@@ -9,18 +9,20 @@
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
-\title{Hole-ice simulation in clsim}
-\subtitle{IceCube Stockholm Collaboration Meeting 2018 \\ Reconstruction/Systematics Session 2}
-\date{2018-09-27 \\ \vspace*{2mm} \tiny{Document 2018-gumee8Ai}}
+\title{Direct hole ice simulations with Upgrade-like geometry}
+\subtitle{IceCube Calibration Call 2018-10-19}
+\date{2018-09-19 \\ \vspace*{2mm} \tiny{Document 2018-ahch8Phe}}
 
-\author[Sebastian Fiedlschuster, ECAP Erlangen]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian@fiedlschuster.de}}
-\institute{Erlangen Centre for Astroparticle Physics}
+\author[Summer Blot, DESY \& Sebastian Fiedlschuster, ECAP]{Summer Blot \& Sebastian Fiedlschuster}
+%\author[Sebastian Fiedlschuster, ECAP Erlangen]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study/issues/117}} \\ \tiny\texttt{sebastian@fiedlschuster.de}}
+\institute{Deutsches Elektronen-Synchrotron\\Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
 \placelogotrue % set it to true
 \logo{\ifplacelogo
   %\raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube}}\hspace{0.3cm}
   \raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube-logo-side-text}}\hspace{0.3cm}
+  \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/DESY_logo_3C_web}}\hspace{0.5cm}
   \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/ecap}}\hspace{0.3cm}
   \includegraphics[height=0.75cm]{img/Logo_FAU_DinA4_RGB}
 \fi}
@@ -44,66 +46,68 @@
 
 \placelogofalse
 
-\section{Introduction}
-  % \include{text/motivation}
-  \include{text/prefix}
+\include{text/azimuthal_angles}
 
-
-  \section{Direct hole-ice simulation}
-  \subsection{How does it work}
-    \include{text/how_does_it_work}
-
-  \section{What can it do}
-  \subsection{Separate cylinder positions}
-    \include{text/separate_cylinder_positions}
-  \subsection{Cable shadows}
-    \include{text/cable_shadows}
-  \subsection{Nested cylinders}
-    \include{text/nested_cylinders}
-    \include{text/nested_shifted_cylinders_with_cable}
-  \subsection{Direct detection}
-    \include{text/direct_detection}
-
-  \subsection{Performance}
-    \include{text/performance_gpu}
-
-  \section{Work to be done}
-    \include{text/what_is_missing}
-    % \include{text/martins_wishlist}
-
-  \section{DOM oversizing}
-  \include{text/dom_oversizing}
-
-\include{text/thanks}
+% \section{Introduction}
+%   % \include{text/motivation}
+%   \include{text/prefix}
+%
+%
+%   \section{Direct hole-ice simulation}
+%   \subsection{How does it work}
+%     \include{text/how_does_it_work}
+%
+%   \section{What can it do}
+%   \subsection{Separate cylinder positions}
+%     \include{text/separate_cylinder_positions}
+%   \subsection{Cable shadows}
+%     \include{text/cable_shadows}
+%   \subsection{Nested cylinders}
+%     \include{text/nested_cylinders}
+%     \include{text/nested_shifted_cylinders_with_cable}
+%   \subsection{Direct detection}
+%     \include{text/direct_detection}
+%
+%   \subsection{Performance}
+%     \include{text/performance_gpu}
+%
+%   \section{Work to be done}
+%     \include{text/what_is_missing}
+%     % \include{text/martins_wishlist}
+%
+%   \section{DOM oversizing}
+%   \include{text/dom_oversizing}
+%
+%\include{text/thanks}
 
 \appendix
 \section{Backup slides}
-\include{text/hole_ice_2017_vs_2018}
-\include{text/performance_medium_changes}
-\include{text/cable_angular_acceptance}
-\include{text/scattering_example}
-\include{text/instant_absorption}
-\include{text/containment_example}
-\include{text/absorption_after_5cm}
-\include{text/cross_checks}
-\include{text/asymmetry_example}
-\include{text/angular_acceptance_methods_comparison}
-\include{text/flasher_parameter_scan}
-\include{text/coordinates_vs_vectors_bug}
-\include{text/simulation_step_flow_chart}
-
-%\section{Some early results}
-%\subsection{How to compare it}
-  \include{text/angular_acceptance}
-  \include{text/angular_acceptance_for_different_parameters} % including systematics
-%\subsection{Comparison to ppc simulation}
-  \include{text/ppc_comparison}
-%\subsection{Comparison to H2 hole-ice model}
-  \include{text/h2_comparison}
-%\subsection{Comparison of parameters from calibration measurements}
-  \include{text/measurement_comparison}
-%\subsection{Direct cable simulation}
-  \include{text/cable_flasher}
+% \include{text/hole_ice_2017_vs_2018}
+% \include{text/performance_medium_changes}
+% \include{text/cable_angular_acceptance}
+% \include{text/scattering_example}
+% \include{text/instant_absorption}
+% \include{text/containment_example}
+% \include{text/absorption_after_5cm}
+% \include{text/cross_checks}
+% \include{text/asymmetry_example}
+% \include{text/angular_acceptance_methods_comparison}
+% \include{text/flasher_parameter_scan}
+% \include{text/coordinates_vs_vectors_bug}
+% \include{text/simulation_step_flow_chart}
+%
+% %\section{Some early results}
+% %\subsection{How to compare it}
+%   \include{text/angular_acceptance}
+%   \include{text/angular_acceptance_for_different_parameters} % including systematics
+% %\subsection{Comparison to ppc simulation}
+%   \include{text/ppc_comparison}
+% %\subsection{Comparison to H2 hole-ice model}
+%   \include{text/h2_comparison}
+% %\subsection{Comparison of parameters from calibration measurements}
+%   \include{text/measurement_comparison}
+% %\subsection{Direct cable simulation}
+%   \include{text/cable_flasher}
 
 
 
