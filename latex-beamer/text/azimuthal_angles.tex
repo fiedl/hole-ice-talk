@@ -47,8 +47,53 @@
   \end{columns}
 \end{frame}
 
-\section{Simulation results}
-\subsection{bubble-column radius $7.5\cm$, geometric scattering length $10\cm$}
+\section{Previous results}
+\begin{frame}[fragile]{Previous talk (2018-10-19)}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{img/summer_scenario_azi120deg_previously}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.8\textwidth]{img/summerscenario-006}
+    \end{column}
+  \end{columns}
+
+  \tiny Configuration: Starting distance $3\m$, plane-wave extent $3\m$, bulk-ice geometric scattering length $130\cm$. \\
+  Comparing different bubble columns for the same direction of incoming photons.
+  \normalsize
+
+  \begin{itemize}
+    \item For the last call, we had some miscommunication regarding the values of the geometric vs. effective scattering length of the hole ice.
+    \item For weak hole as (e.g. geometric $\lambda_\text{sca} = 10\cm$), as shown in the last call, the angular-acceptance curves do not look that different.
+  \end{itemize}
+
+\end{frame}
+
+\section{New simulation results}
+\subsection{Compare different bubble columns for same angle}
+\begin{frame}[fragile]{New simulation results}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{img/summer_scenario_azi120deg}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.8\textwidth]{img/summerscenario-006}
+    \end{column}
+  \end{columns}
+
+  \tiny Configuration: Starting distance $3\m$, plane-wave extent $3\m$, bulk-ice geometric scattering length $130\cm$. \\
+    Comparing different bubble columns for the same direction of incoming photons.
+  \normalsize
+
+  \begin{itemize}
+    \item Effective scattering length $\lambda_\text{e} = \frac{\lambda_\text{sca}}{(1 - \langle\cos \theta\rangle)}, \langle\cos \theta\rangle = 0.94, \lambda_\text{sca} = 0.06\,\lambda_\text{e}$
+    \item For stronger hole ice (e.g. $\lambda_\text{e} = 10\cm$, i.e. $\lambda_\text{sca} = 0.6\cm$), the hole-ice radius does matter. \checkmark
+    \item For a stronger or larger bubble column, the hole-ice effect for lower angles should increase. \checkmark
+  \end{itemize}
+\end{frame}
+
+\subsection{bubble-column radius $7.5\cm$, effective scattering length $10\cm$}
 \begin{frame}[fragile]{Simulation results}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -71,7 +116,7 @@
   \end{itemize}
 \end{frame}
 
-\subsection{bubble-column radius $15\cm$, geometric scattering length $10\cm$}
+\subsection{bubble-column radius $15\cm$, effective scattering length $10\cm$}
 \begin{frame}[fragile]{Simulation results}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -93,7 +138,7 @@
   \end{itemize}
 \end{frame}
 
-\subsection{bubble-column radius $15\cm$, geometric scattering length $70\cm$}
+\subsection{bubble-column radius $15\cm$, effective scattering length $70\cm$}
 \begin{frame}[fragile]{Simulation results}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -114,7 +159,7 @@
   \end{itemize}
 \end{frame}
 
-\subsection{bubble-column radius $30\cm$, geometric scattering length $70\cm$}
+\subsection{bubble-column radius $30\cm$, effective scattering length $70\cm$}
 \begin{frame}[fragile]{Simulation results}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -136,25 +181,6 @@
   \end{itemize}
 \end{frame}
 
-\subsection{Compare different bubble columns for same angle}
-\begin{frame}[fragile]{Simulation results}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=\textwidth]{img/summer_scenario_azi120deg}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.8\textwidth]{img/summerscenario-006}
-    \end{column}
-  \end{columns}
-
-  \tiny Configuration: Starting distance $3\m$, plane-wave extent $3\m$, bulk-ice geometric scattering length $130\cm$.
-  \normalsize
-
-  \begin{itemize}
-    \item Comparing different bubble columns for the same direction of incoming photons.
-    \item For a stronger or larger bubble column, the effect should increase. \checkmark
-  \end{itemize}
-\end{frame}
 
 \section{}
 \begin{frame}[fragile]{Thanks for your attention!}
@@ -164,8 +190,6 @@
   \url{https://github.com/fiedl/hole-ice-study/issues/117} \\ \vspace{0.1cm}
 
   Slack:
-  \href{https://icecube-spno.slack.com/messages/U0BJE7Z7T}{\texttt{@sblot}}
-  \&
   \href{https://icecube-spno.slack.com/messages/@U092MBFU2}{\texttt{@fiedl}}
 
   \vspace{1.5cm}
