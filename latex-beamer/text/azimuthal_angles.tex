@@ -64,13 +64,13 @@
   \normalsize
 
   \begin{itemize}
-    \item For the last call, we had some miscommunication regarding the values of the geometric vs. effective scattering length of the hole ice.
-    \item For weak hole as (e.g. geometric $\lambda_\text{sca} = 10\cm$), as shown in the last call, the angular-acceptance curves do not look that different.
+    \item In preparation of the last call, we had some misunderstanding regarding the values of the geometric vs. effective scattering length of the hole ice.
+    \item For weak hole as (e.g. geometric $\lambda_\text{sca} = 10\cm$), as shown in the last call, the angular-acceptance curves do not look that different for different hole-ice radii.
   \end{itemize}
 
 \end{frame}
 
-\section{New simulation results}
+\section{New simulation results: Different hole-ice radii}
 \subsection{Compare different bubble columns for same angle}
 \begin{frame}[fragile]{New simulation results}
   \begin{columns}
@@ -94,7 +94,7 @@
 \end{frame}
 
 \subsection{bubble-column radius $7.5\cm$, effective scattering length $10\cm$}
-\begin{frame}[fragile]{Simulation results}
+\begin{frame}[fragile]{New simulation results: Different azimuthal directions}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \includegraphics[width=\textwidth]{img/summer_scenario_r7-5cm_esca10cm}
@@ -117,7 +117,7 @@
 \end{frame}
 
 \subsection{bubble-column radius $15\cm$, effective scattering length $10\cm$}
-\begin{frame}[fragile]{Simulation results}
+\begin{frame}[fragile]{New simulation results: Different azimuthal directions}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \includegraphics[width=\textwidth]{img/summer_scenario_r15cm_esca10cm}
@@ -139,7 +139,7 @@
 \end{frame}
 
 \subsection{bubble-column radius $15\cm$, effective scattering length $70\cm$}
-\begin{frame}[fragile]{Simulation results}
+\begin{frame}[fragile]{New simulation results: Different azimuthal directions}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \includegraphics[width=\textwidth]{img/summer_scenario_r15cm_esca70cm}
@@ -160,7 +160,7 @@
 \end{frame}
 
 \subsection{bubble-column radius $30\cm$, effective scattering length $70\cm$}
-\begin{frame}[fragile]{Simulation results}
+\begin{frame}[fragile]{New simulation results: Different azimuthal directions}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \includegraphics[width=\textwidth]{img/summer_scenario_r30cm_esca70cm}
@@ -179,6 +179,31 @@
     \item For a larger bubble column, the effect should increase. \checkmark
     \item Less photons should arrive in total \tiny as the whole DOM is now shielded by the hole ice. \normalsize \checkmark
   \end{itemize}
+\end{frame}
+
+\section{Facit \& questions}
+\begin{frame}[fragile]{Facit \& questions}
+
+  \begin{itemize}
+    \item The method is sensitive to the bubble-column position.
+    \item The method is sensitive to the bubble-column radius or scattering length if the other is known.
+    \item \textbf{Question:} Is there an independent method of determining bubble-column radius or scattering length in the Upgrade?
+  \end{itemize}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \vspace*{3mm}
+      \includegraphics[width=\textwidth]{img/flasher-contours-martin}
+
+      \tiny SpiceHD study using direct hole-ice propagation, fitting the size and scattering length of the bubble column and the position of the optical modules relative to the column. Source: Rongen. Status and future of SpiceHD and DARD, Calibration Workshop August 2017.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.8\textwidth]{img/camera2018-01}
+
+      \vspace*{4mm}
+      \tiny Swedish-camera images from 2018 still show a diffuse bubble column. Source: Resconi, Rongen, Krings. The Precision Optical CAlibration Module for IceCube-Gen2: First Prototype. 2017.
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
