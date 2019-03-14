@@ -6,16 +6,28 @@
 
 \section{Overview}
 \subsection{Goal and Context}
-\begin{frame}{Overview: Goal and Context}
-  \begin{description}
-    \item[Origin] \her{Diploma thesis} (2018-09) implementing direct photon propagation through hole ice in clsim in order to study hole-ice effects and improve understanding of low-energy systematics. \small \url{https://github.com/fiedl/hole-ice-study} \normalsize
+\begin{frame}[fragile]{Overview: Goal and Context}
+  \begin{columns}
+    \begin{column}{0.65\textwidth}
+      \begin{description}
+        \item[Origin] \her{Diploma thesis} (2018-09) implementing direct photon propagation through hole ice in clsim in order to study hole-ice effects and improve understanding of low-energy systematics. \small \url{https://github.com/fiedl/hole-ice-study} \normalsize
 
-    \item[Goal] \her{Bring} the new simulation \her{into} the icecube-simulation \her{framework} such that other icecubers can use it.
+        \item[Goal] \her{Bring} the new simulation \her{into} the icecube-simulation \her{framework} such that other icecubers can use it.
 
-    \item[Context] \her{Service work} for the icecube collaboration in the beginning of my time as PhD student with icecube at ECAP/Erlangen.
+        \item[Context] \her{Service work} for the icecube collaboration in the beginning of my time as PhD student with icecube at ECAP/Erlangen.
 
-    \item[Time frame] about 6 months
-  \end{description}
+        \item[Time frame] about 6 months
+      \end{description}
+
+      \source{\underline{Top}: Rongen: The 2018 Sweden Camera run — light at the end of the ice, 2018. \underline{Bottom}: \url{https://github.com/fiedl/hole-ice-study/issues/107}}
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \image{camera2018-01}
+
+      % https://github.com/fiedl/hole-ice-study/issues/107
+      \image{flasher-steamshovel-single-received-photon}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \subsection{Work to be done}
@@ -45,10 +57,11 @@
 \begin{frame}{\done Compile IceSim V06-01-01 with Python 3}
   \begin{itemize}
     \item In Stockholm (2018-09), the icecube software group requested the hole-ice example scripts to be provided in Python 3 (rather than Python 2 or Ruby) in order to push the migration to Python 3 forward.
-    \item The current icecube documentation on how to install the framework still assumes Python 2: \url{http://software.icecube.wisc.edu/documentation/projects/cmake/supported_platforms/osx.html}
-    \item[\done] Using Vagrant, a virtual-machine wrapper, I figured out a clean, reproducible way to install icecube-simulation V06-01-01 on macOS Sierra, which I use locally.
+    \item The current icecube documentation on how to install the framework on macOS still assumes Python 2: \url{http://software.icecube.wisc.edu/documentation/projects/cmake/supported_platforms/osx.html}
+    \item[\done] Using Vagrant, a virtual-machine wrapper, I've documented a clean, reproducible way to install icecube-simulation V06-01-01 on macOS Sierra, which I use locally.
     \item[\done] Found a couple of issues and provided patches.
     \item[\tobedone] Still need to talk to the software group. Maybe they want to link or import the install  documentation.
+    \item[\tobedone] I would love to run this on Travis-CI. But this would expose the build logs (no credentials) to the public. Need to check with software group whether this would be ok.
   \end{itemize}
 
   \bigskip \her{Documented at: \url{https://github.com/fiedl/hole-ice-install}} \bigskip
@@ -58,13 +71,13 @@
 \begin{frame}{\inprogress Port hole-ice code to clsim of icecube-simulation V06-01-01}
   \begin{itemize}
     \item The original study was based on the icecube-simulation framework V05-00-07 from 2016.
-    \item From the V05-00-07 (2016) to V06-01-01 (2019), there are 416 commits in clsim. A lot has changed.
+    \item From the V05-00-07 (2016) to V06-01-01 (2019), there are 93 commits in clsim. A lot has changed.
     \item There are two separate repositories for original clsim, in addition to the hole-ice fork, which need to be kept in sync. For my work, I have forked Claudio's repository on github. But now, Claudio's github repository is behind the current work in the SVN repository. \\
       \url{http://code.icecube.wisc.edu/svn/projects/clsim} \\
       \url{https://github.com/claudiok/clsim} \\
       \url{https://github.com/fiedl/clsim}
     \item[\done] Find common interface to sync the repositories: \texttt{git-svn}
-    \item[\inprogress] Coordinating with the clsim maintainer, Claudio Kopper: The repositories need to be synced before the code can be ported.
+    \item[\inprogress] Coordinating with the clsim maintainer, Claudio Kopper: The repositories need to be synced before the code can be ported to avoid conflicts later.
     \item[\tobedone] Rebase the hole-ice changes onto the V06-01-01 release
     \item[\tobedone] Make sure everything is still running
     \item[\tobedone] Make sure there are no conflicts with other attempt on cable shadows
@@ -105,8 +118,8 @@
 \begin{frame}{\tobedone Merge hole-ice code into clsim trunk}
   \begin{itemize}
     \item When everything works as expected:
-    \item[\tobedone] Port hole-ice code to svn trunk of the icecube-simulation framework
-    \item[\tobedone] Create a feature branch based on trunk on the svn
-    \item[\tobedone] Coordinate with the clsim maintainer, Claudio Kopper, to get it accepted into the framework
+    \item[\tobedone] Port hole-ice code to work with svn trunk of the icecube-simulation framework
+    \item[\tobedone] Create a feature branch based on the clsim trunk on the svn
+    \item[\tobedone] Coordinate with the clsim maintainer, Claudio Kopper, to get it merged into the clsim trunk
   \end{itemize}
 \end{frame}
