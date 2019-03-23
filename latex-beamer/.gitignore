@@ -9,3 +9,5 @@
 *.pygtex
 _minted*
 *.vrb
+*.fdb_latexmk
+*.fls
