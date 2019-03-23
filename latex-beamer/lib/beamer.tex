@@ -5,6 +5,8 @@
 
 \beamertemplatenavigationsymbolsempty
 
+\setbeamertemplate{footline}[author, title, frame number]
+
 \newcommand{\vtiny}{\fontsize{6}{1}\selectfont}
 \usepackage[absolute,overlay]{textpos}
 
@@ -58,6 +60,15 @@
 \setlist{parsep=6pt}
 \setitemize{label=\textbullet}
 \setdescription{labelindent=0pt,labelwidth=2.1cm,labelsep*=1em,leftmargin=!, font={\mdseries\sffamily\color{blue}}}
+
+% Slide number in footer
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+   \oldmacro\hfill%
+   %\insertframenumber\,/\,\inserttotalframenumber}
+   \insertframenumber}
+
 % Logo in header
 % https://tex.stackexchange.com/a/347635/70789
 \makeatletter
