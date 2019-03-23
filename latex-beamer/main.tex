@@ -9,11 +9,11 @@
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
-\title[Simulation of Light Propagation Through Hole Ice, IceCube, DPG Aachen 2019-03-25]{Simulation of Light Propagation Through Hole Ice\\for the IceCube Experiment}
+\title[Simulation of Light Propagation Through Hole Ice in IceCube]{Simulation of Light Propagation Through Hole Ice\\for the IceCube Experiment}
 \subtitle{DPG Conference Aachen 2019\\Session T11 Neutrino Astronomy I}
 \date{2019-03-25 \\ \vspace*{2mm} \tiny{Document 2019-ceGhee3n} \normalsize}
 
-\author[Sebastian Fiedlschuster, ECAP Erlangen]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
+\author[Sebastian Fiedlschuster, ECAP Erlangen, 2019-03-25]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
@@ -48,24 +48,18 @@
 \placelogofalse
 
 \section{Introduction}
+  \include{text/prefix}
   \include{text/icecube}
   \include{text/motivation}
-  \include{text/prefix}
+%  \include{text/outline}
 
 \section{Hole-Ice-Simulation Algorithm}
 \subsection{How does it work?}
   \include{text/how_does_it_work}
 \subsection{What can it do?}
-  \include{text/separate_cylinder_positions}
-  \include{text/cable_shadows}
-  \include{text/nested_cylinders}
   \include{text/nested_shifted_cylinders_with_cable}
   \include{text/scattering_example}
   \include{text/flasher_scan_steamshovel_example}
-
-\subsection{Performance considerations}
-  \include{text/performance_medium_changes}
-  \include{text/performance_gpu}
 
 % \section{Examples of Application}
 % \subsection{Vary scattering length}
@@ -94,6 +88,10 @@
 \section{Backup slides}
   \include{text/backup_slides}
 
+\subsection{Performance considerations}
+  \include{text/performance_medium_changes}
+  \include{text/performance_gpu}
+
 \subsection{Direct detection}
   \include{text/direct_detection}
 
@@ -112,10 +110,15 @@
   \include{text/cross_checks}
 
 \subsection{Asymmetry example}
+  \include{text/separate_cylinder_positions}
   \include{text/asymmetry_example}
 
 \subsection{Cable-shadow example}
+  \include{text/cable_shadows}
   \include{text/cable_angular_acceptance}
+
+\subsection{Nested-cylinders example}
+  \include{text/nested_cylinders}
 
 \subsection{Things to watch out for}
   \include{text/coordinates_vs_vectors_bug}
