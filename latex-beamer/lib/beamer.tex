@@ -69,31 +69,31 @@
    %\insertframenumber\,/\,\inserttotalframenumber}
    \insertframenumber}
 
-% Logo in header
-% https://tex.stackexchange.com/a/347635/70789
-\makeatletter
-\setbeamertemplate{headline}
-{%
-  \leavevmode%
-  \@tempdimb=2.4375ex%
-  \ifnum\beamer@subsectionmax<\beamer@sectionmax%
-    \multiply\@tempdimb by\beamer@sectionmax%
-  \else%
-    \multiply\@tempdimb by\beamer@subsectionmax%
-  \fi%
-  \ifdim\@tempdimb>0pt%
-    \advance\@tempdimb by 1.825ex%
-    \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{section in head/foot}%
-      \vbox to\@tempdimb{\vfil\insertsectionnavigation{.5\paperwidth}\vfil}%
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
-      \vbox to\@tempdimb{\vfil\insertsubsectionnavigation{.3\paperwidth}\vfil}%
-      \hfill
-      \unless\ifplacelogo % If the main logo is not shown, use the header logo
-        \raisebox{0.18\headheight}{\includegraphics[height=0.7\headheight]{img/icecube-sm}}
-        \raisebox{0.3\headheight}{\includegraphics[height=0.6\headheight]{img/ecap-sm}}
-      \fi
-    \end{beamercolorbox}%
-  \fi%
-}
-\makeatother
+% % Logo in header
+% % https://tex.stackexchange.com/a/347635/70789
+% \makeatletter
+% \setbeamertemplate{headline}
+% {%
+%   \leavevmode%
+%   \@tempdimb=2.4375ex%
+%   \ifnum\beamer@subsectionmax<\beamer@sectionmax%
+%     \multiply\@tempdimb by\beamer@sectionmax%
+%   \else%
+%     \multiply\@tempdimb by\beamer@subsectionmax%
+%   \fi%
+%   \ifdim\@tempdimb>0pt%
+%     \advance\@tempdimb by 1.825ex%
+%     \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{section in head/foot}%
+%       \vbox to\@tempdimb{\vfil\insertsectionnavigation{.5\paperwidth}\vfil}%
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
+%       \vbox to\@tempdimb{\vfil\insertsubsectionnavigation{.3\paperwidth}\vfil}%
+%       \hfill
+%       \unless\ifplacelogo % If the main logo is not shown, use the header logo
+%         \raisebox{0.18\headheight}{\includegraphics[height=0.7\headheight]{img/icecube-sm}}
+%         \raisebox{0.3\headheight}{\includegraphics[height=0.6\headheight]{img/ecap-sm}}
+%       \fi
+%     \end{beamercolorbox}%
+%   \fi%
+% }
+% \makeatother
