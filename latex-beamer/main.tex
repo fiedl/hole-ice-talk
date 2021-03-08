@@ -9,17 +9,17 @@
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
-\title[Simulation of Light Propagation Through Hole Ice in IceCube]{Simulation of Light Propagation Through Hole Ice\\for the IceCube Experiment}
-\subtitle{DPG Conference Aachen 2019\\Session T11 Neutrino Astronomy I}
-\date{2019-03-25 \\ \vspace*{2mm} \tiny{Document 2019-ceGhee3n} \normalsize}
+\title[Hole Ice, Cables, and Non-Spherical Detector Modules in Light-Propagation Simulations]{Hole Ice, Cables, and Non-Spherical Detector Modules in Light-Propagation Simulations for the IceCube Experiment}
+\subtitle{DPG Conference Dortmund 2021 (Virtual)\\ Session T22 Experimental techniques in astroparticle physics I}
+\date{2021-03-15 \\ \vspace*{2mm}\tiny{Document 2021-voXoo3zo} \normalsize}
 
-\author[Sebastian Fiedlschuster, ECAP Erlangen, 2019-03-25]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
+\author[Sebastian Fiedlschuster, ECAP Erlangen, 2021-03-15]{Sebastian Fiedlschuster \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
 \placelogotrue % set it to true
 \logo{\ifplacelogo
-  \raisebox{-0.12cm}{\includegraphics[height=0.9cm]{img/DEgov-BMBF-Logo_en}}\hspace{0.3cm}
+  %\raisebox{-0.12cm}{\includegraphics[height=0.9cm]{img/DEgov-BMBF-Logo_en}}\hspace{0.3cm}
   %\raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube}}\hspace{0.3cm}
   \raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube-logo-side-text}}\hspace{0.3cm}
   % \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/DESY_logo_3C_web}}\hspace{0.5cm}
@@ -35,6 +35,10 @@
 \input{lib/units}
 \input{lib/todo}
 
+\newcommand\done{\checkmark\xspace}
+\newcommand\inprogress{$\Rightarrow$\xspace}
+\newcommand\tobedone{$\square$\xspace}
+
 %\includeonly{}
 
 \begin{document}
@@ -47,46 +51,42 @@
 
 \placelogofalse
 
-\section{Introduction}
+%\section{Introduction}
   \include{text/prefix}
   \include{text/icecube}
   \include{text/motivation}
 %  \include{text/outline}
 
-\section{Hole-Ice-Simulation Algorithm}
-\subsection{How does it work?}
+\section{Photon-Propagation Algorithm}
   \include{text/how_does_it_work}
-\subsection{What can it do?}
+
+\section{Examples of Application}
+\subsection{Vary drill-hole ice properties}
+  \include{text/short_scattering_example}
+\subsection{Realistic geometry}
   \include{text/nested_shifted_cylinders_with_cable}
-  \include{text/scattering_example}
+\subsection{POCAM Study}
+  \include{text/pocam}
+\subsection{Flasher Scan}
   \include{text/flasher_scan_steamshovel_example}
-
-% \section{Examples of Application}
-% \subsection{Vary scattering length}
-%   \include{text/scattering_example}
-% \subsection{Separate cylinder positions}
-%   \include{text/separate_cylinder_positions}
-%   \include{text/asymmetry_example}
-% \subsection{Cable shadows}
-%   \include{text/cable_shadows}
-%   \include{text/cable_angular_acceptance}
-% \subsection{Nested cylinders}
-%   \include{text/nested_cylinders}
-%   \include{text/nested_shifted_cylinders_with_cable}
-
-\section{Early Results}
-\subsection{Example scan for best hole-ice parameters based on calibration data}
   \include{text/flasher_parameter_scan}
-\subsection{Calibration data suggest asymmetric shielding by hole ice}
-  \include{text/cable_flasher}
+\subsection{DOM Types}
+  \include{text/dom_types}
 
-\section{Outlook}
-  \include{text/next_steps}
+\section{Status}
+  \include{text/status}
+\section{Results}
+  \include{text/results}
+
+%\section{Outlook}
+  %\include{text/next_steps}
   \include{text/thanks}
 
 \appendix
 \section{Backup slides}
-  \include{text/backup_slides}
+
+\subsection{Hole ice}
+  \include{text/what_is_hole_ice}
 
 \subsection{Performance considerations}
   \include{text/performance_medium_changes}
@@ -116,6 +116,10 @@
   \include{text/cable_shadows}
   \include{text/cable_angular_acceptance}
   \include{text/nested_cylinders}
+  \include{text/nested_shifted_cylinders_with_cable}
+  \include{text/flasher_scan_steamshovel_example}
+  \include{text/flasher_parameter_scan}
+  \include{text/cable_flasher}
 
 %\subsection{State of the hole-ice simulation}
 %  \include{text/checklist}
@@ -130,14 +134,14 @@
 \subsection{Azimuthal-angles study}
   \include{text/azimuthal_angles}
 
-%\subsection{Algorithm comparison}
-%  \include{text/hole_ice_2017_vs_2018}
+\subsection{Algorithm comparison}
+  \include{text/hole_ice_2017_vs_2018}
 
-%\subsection{Comparison to ppc simulation}
-%  \include{text/ppc_comparison}
-%\subsection{Comparison to H2 hole-ice model}
-%  \include{text/h2_comparison}
-%\subsection{Comparison of parameters from calibration measurements}
-%  \include{text/measurement_comparison}
+\subsection{Comparison to ppc simulation}
+  \include{text/ppc_comparison}
+\subsection{Comparison to H2 hole-ice model}
+  \include{text/h2_comparison}
+\subsection{Comparison of parameters from calibration measurements}
+  \include{text/measurement_comparison}
 
 \end{document}

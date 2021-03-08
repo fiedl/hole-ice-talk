@@ -13,13 +13,13 @@
       \end{overlayarea}
     \end{column}
     \begin{column}{0.5\textwidth}
-
+      \vspace*{-8mm}
       \begin{itemize}
         \item Photon scattering points $A$ and $B$
         \item<1> \her{Naive algorithm}: Propagate photon small distance $\delta x$ in each simulation step and randomize whether the photon will scatter in this step (easy to implement local properties)
         \item<2> \her{Faster algorithm}: Randomize geometric distance to next scattering point and propagate from $A$ to $B$ in one simulation step
         \item<3> \her{Ice layers} with different optical properties: Randomize number of scattering lengths between $A$ and $B$ as budget and calculate geometric distance by spending the budget over the ice layers
-        \item<4> \her{New: Hole ice}: Generalize budget algorithm to also support cylinders (with distinct scattering and absorption lengths).
+        \item<4> \her{New:} Generalize budget algorithm to support cylinders and possibly other shapes with distinct scattering and absorption lengths and detection probabilities.
       \end{itemize}
 
     \end{column}

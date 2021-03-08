@@ -1,0 +1,44 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Trying out different hole-ice scattering lengths}
+
+  The exact optical properties of the hole ice are unknown. With the simulation, one can try out different properties, e.g. scattering length.
+  \vspace{1cm}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{example-sca0-1-steamshovel-color}
+
+      \small
+      Scattering length $\lambda_\text{sca,hole-ice} = 10^{-1}\, \lambda_\text{sca,bulk}$.
+      Absorption length $\lambda_\text{abs,hole-ice} = \lambda_\text{sca,bulk}$.
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \image{example-sca0-001-steamshovel-color}
+
+      \small
+      Scattering length $\lambda_\text{sca,hole-ice} = 10^{-3}\, \lambda_\text{sca,bulk}$.
+      Absorption length $\lambda_\text{abs,hole-ice} = \lambda_\text{sca,bulk}$.
+
+    \end{column}
+  \end{columns}
+
+  \vspace{0.7cm}
+  \small
+  Animation on youtube: \url{https://youtu.be/BhJ6F3B-I1s}
+
+  \tiny{View from top onto a detector module within a hole-ice cylinder. Colors indicate simulation steps, i.e. number of scatterings relative to the total number until absorption. \color{red}{Red}: Photon just created, \color{blue}{blue}: Photon about to be absorbed.}
+
+  \source{\url{https://github.com/fiedl/hole-ice-study/issues/39}}
+
+\end{frame}
+
+\note[itemize]{
+  \item Photon wave length: 340\,nm (UV)
+  \item DOM position: $(-256.02301025390625, -521.281982421875, 500.0)$
+  \item Scattering length in bulk ice at this DOM: $1.78\,\text{m} \pm 1.79\,\text{m}$
+  \item Absorption length in bulk ice at this DOM: about 150\,m
+  \item The last example is rather extreme. No sharp border in current understanding of hole ice. But I don't know the correct ice properties of the hole ice.
+  \follows Need a way to compare these simulations to other studies.
+  \follows e.g. Angular acceptance plots
+}

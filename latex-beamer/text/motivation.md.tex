@@ -2,20 +2,51 @@
 
 \begin{frame}[fragile]{Motivation and Scope}
   \begin{column}{0.6\textwidth}
-    \image{hole-ice-camera}
+    \image{dom_geometry_features}
   \end{column}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-      \item \her{Hole ice} is the refrozen water in the drill holes around the detector modules
-      \item possibly \her{different optical properties} than surrounding bulk ice
-      %\item special kinds: \\ drill-hole ice \\ bubble column
-      \item Implement \her{hole ice in photon-propagation simulation} in order to improve detector calibration
+      \item Topic: \her{Light-propagation simulation} in vicinity of detector modules, considering:
+      \begin{itemize}
+        \item \her{ice properties} in vicinity, esp. in drill hole
+        \item opaque \her{cables}
+        \item non-spherical \her{detector modules} of variable position
+      \end{itemize}
+      \item Usually: \her{Effective} modification of module \her{sensitivity}
+      \item Here: Direct \her{ray-tracing} algorithm
     \end{itemize}
 
     \vspace{2cm}
-    \vtiny{Images (a) to (g) show a time series of the freeze-in process. Image (h) shows has been taken several years after the freeze-in process.\\ \par Image sources: Resconi, Rongen, Krings: The Precision Optical CAlibration Module for IceCube-Gen2: First Prototype, 2017. Finley et al.: Freezing in the IceCube camera in string 80, 22 Dec - 1st Jan. 2011. Rongen: The 2018 Sweden Camera run — light at the end of the ice,  2018.}
+    \vtiny{D-Egg-detector-module image: \href{https://indico.scc.kit.edu/event/215/contributions/890/attachments/641/954/IceCube-Gen2_Peiffer_HAP.pdf}{Pfeiffer, New optical sensors for IceCube-Gen2, 2016}}
+
   \end{column}
 \end{frame}
+
+% - this talk about simulation of light propagation in the vincinity of the detector modules
+% - certain features make simulation more complicated
+%   - ice properties in vincinity of modules
+%   - cables beside modules
+%   - shape of the different types of detector modules
+% - currently: using effective quantities to account for these features, but not directly in ray-tracing algorithms
+% - for calibration studies, direct simulation more desirable in order to study the effects of these features rather than making assumptions about them
+% - in this talk: presenting improved ray-tracing algorithm that accounts for these features, and highlights the major things to watch out for.
+
+% \begin{frame}[fragile]{Motivation and Scope}
+%   \begin{column}{0.6\textwidth}
+%     \image{hole-ice-camera}
+%   \end{column}
+%   \begin{column}{0.4\textwidth}
+%     \begin{itemize}
+%       \item \her{Hole ice} is the refrozen water in the drill holes around the detector modules
+%       \item possibly \her{different optical properties} than surrounding bulk ice
+%       %\item special kinds: \\ drill-hole ice \\ bubble column
+%       \item Implement \her{hole ice in photon-propagation simulation} in order to improve detector calibration
+%     \end{itemize}
+%
+%     \vspace{2cm}
+%     \vtiny{Images (a) to (g) show a time series of the freeze-in process. Image (h) shows has been taken several years after the freeze-in process.\\ \par Image sources: Resconi, Rongen, Krings: The Precision Optical CAlibration Module for IceCube-Gen2: First Prototype, 2017. Finley et al.: Freezing in the IceCube camera in string 80, 22 Dec - 1st Jan. 2011. Rongen: The 2018 Sweden Camera run — light at the end of the ice,  2018.}
+%   \end{column}
+% \end{frame}
 
 % \begin{frame}[fragile]{Motivation and Scope}
 %

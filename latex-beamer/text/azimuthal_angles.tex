@@ -1,33 +1,33 @@
 %!TEX TS-program = ../make.zsh
 
-\begin{frame}{Resources}
-  \begin{center}
-    \textbf{Scripts and plots for this talk}: \\ \vspace{0.2cm}
-    \url{https://github.com/fiedl/hole-ice-study/issues/117}
-
-    \vspace{1cm}
-
-    \textbf{YouTube video with Steamshovel visualization}: \\ \vspace{0.2cm}
-    \url{https://youtu.be/Wiu8CpVQn14}
-
-    \vspace{1cm}
-
-    Thesis (2018-09-05) with more info on direct hole-ice simulation: \\ \vspace{0.2cm}
-    \url{https://github.com/fiedl/hole-ice-latex}
-
-    \vspace{1cm}
-
-    Previous talks: \\ \vspace{0.2cm}
-    \url{https://github.com/fiedl/hole-ice-talk/releases}
-
-    \vspace{1cm}
-
-    \LaTeX\ version of these presentation slides: \\ \vspace{0.2cm}
-    \url{https://github.com/fiedl/hole-ice-talk}
-  \end{center}
-\end{frame}
-
-\section{Simulation scenario}
+% \begin{frame}{Resources}
+%   \begin{center}
+%     \textbf{Scripts and plots for this talk}: \\ \vspace{0.2cm}
+%     \url{https://github.com/fiedl/hole-ice-study/issues/117}
+%
+%     \vspace{1cm}
+%
+%     \textbf{YouTube video with Steamshovel visualization}: \\ \vspace{0.2cm}
+%     \url{https://youtu.be/Wiu8CpVQn14}
+%
+%     \vspace{1cm}
+%
+%     Thesis (2018-09-05) with more info on direct hole-ice simulation: \\ \vspace{0.2cm}
+%     \url{https://github.com/fiedl/hole-ice-latex}
+%
+%     \vspace{1cm}
+%
+%     Previous talks: \\ \vspace{0.2cm}
+%     \url{https://github.com/fiedl/hole-ice-talk/releases}
+%
+%     \vspace{1cm}
+%
+%     \LaTeX\ version of these presentation slides: \\ \vspace{0.2cm}
+%     \url{https://github.com/fiedl/hole-ice-talk}
+%   \end{center}
+% \end{frame}
+%
+% \section{Simulation scenario}
 \begin{frame}[fragile]{Simulation scenario}
   For each angle polar and azimuthal angle, shoot photons onto the DOM, possibly propagate through the bubble column, and count hits.
 
@@ -47,32 +47,32 @@
   \end{columns}
 \end{frame}
 
-\section{Previous results}
-\begin{frame}[fragile]{Previous talk (2018-10-19)}
+% \section{Previous results}
+% \begin{frame}[fragile]{Previous talk (2018-10-19)}
+%
+%   \tiny \url{https://github.com/fiedl/hole-ice-talk/releases/download/v1.4/2018-10-19.Direct.hole.ice.simulations.with.Upgrade-like.geometry.Blot.Fiedlschuster.pdf} \normalsize
+%
+%   \begin{columns}
+%     \begin{column}{0.5\textwidth}
+%       \includegraphics[width=\textwidth]{img/summer_scenario_azi120deg_previously}
+%     \end{column}
+%     \begin{column}{0.5\textwidth}
+%       \includegraphics[width=0.8\textwidth]{img/summerscenario-006}
+%     \end{column}
+%   \end{columns}
+%
+%   \tiny Configuration: Starting distance $3\m$, plane-wave extent $3\m$, bulk-ice geometric scattering length $130\cm$. \\
+%   Comparing different bubble columns for the same direction of incoming photons.
+%   \normalsize
+%
+%   \begin{itemize}
+%     \item In preparation of the last call, we had some misunderstanding regarding the values of the geometric vs. effective scattering length of the hole ice.
+%     \item For weak hole as (e.g. geometric $\lambda_\text{sca} = 10\cm$), as shown in the last call, the angular-acceptance curves do not look that different for different hole-ice radii.
+%   \end{itemize}
+%
+% \end{frame}
 
-  \tiny \url{https://github.com/fiedl/hole-ice-talk/releases/download/v1.4/2018-10-19.Direct.hole.ice.simulations.with.Upgrade-like.geometry.Blot.Fiedlschuster.pdf} \normalsize
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=\textwidth]{img/summer_scenario_azi120deg_previously}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.8\textwidth]{img/summerscenario-006}
-    \end{column}
-  \end{columns}
-
-  \tiny Configuration: Starting distance $3\m$, plane-wave extent $3\m$, bulk-ice geometric scattering length $130\cm$. \\
-  Comparing different bubble columns for the same direction of incoming photons.
-  \normalsize
-
-  \begin{itemize}
-    \item In preparation of the last call, we had some misunderstanding regarding the values of the geometric vs. effective scattering length of the hole ice.
-    \item For weak hole as (e.g. geometric $\lambda_\text{sca} = 10\cm$), as shown in the last call, the angular-acceptance curves do not look that different for different hole-ice radii.
-  \end{itemize}
-
-\end{frame}
-
-\section{New simulation results: Different hole-ice radii}
+% \section{New simulation results: Different hole-ice radii}
 \subsection{Compare different bubble columns for same angle}
 \begin{frame}[fragile]{New simulation results}
   \begin{columns}
@@ -183,61 +183,61 @@
   \end{itemize}
 \end{frame}
 
-\section{Facit \& questions}
-\begin{frame}[fragile]{Facit \& questions}
-
-  \begin{itemize}
-    \item The method is sensitive to the bubble-column position.
-    \item The method is sensitive to the bubble-column radius or scattering length if the other is known.
-    \item \textbf{Question:} Is there an independent method of determining bubble-column radius or scattering length in the Upgrade?
-  \end{itemize}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \vspace*{3mm}
-      \includegraphics[width=\textwidth]{img/flasher-contours-martin}
-
-      \tiny SpiceHD study using direct hole-ice propagation, fitting the size and scattering length of the bubble column and the position of the optical modules relative to the column. Source: Rongen. Status and future of SpiceHD and DARD, Calibration Workshop August 2017.
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=0.8\textwidth]{img/camera2018-01}
-
-      \vspace*{4mm}
-      \tiny Swedish-camera images from 2018 still show a diffuse bubble column. Source: Resconi, Rongen, Krings. The Precision Optical CAlibration Module for IceCube-Gen2: First Prototype. 2017.
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\section{Next steps}
-\begin{frame}[fragile]{Next step: More realistic simulation scenario}
-  \begin{itemize}
-    \item New scenario: Still count hits at receiving DOM and check if sensitive to the bubble-column position and strength, but start photons from near POCAMs rather than from plane waves.
-    \item \textbf{Question}: Is there a POCAM photon source in IceTray?
-    \item \textbf{Question}: Where can I get the coordinates of the proposed POCAMs?
-  \end{itemize}
-  \includegraphics[width=0.9\textwidth]{img/pocamscenario}
-
-  \tiny For a follow up on this, see \url{https://github.com/fiedl/hole-ice-study/issues/118}.
-\end{frame}
-
-\section{}
-\begin{frame}[fragile]{Thanks for your attention!}
-  \begin{center}
-  Any input you might have is welcome: \\ \vspace{0.3cm}
-
-  \url{https://github.com/fiedl/hole-ice-study/issues/117} \\
-  \url{https://github.com/fiedl/hole-ice-study/issues/118} \\ \vspace{0.1cm}
-
-  Slack:
-  \href{https://icecube-spno.slack.com/messages/@U092MBFU2}{\texttt{@fiedl}}
-
-  \vspace{1.5cm}
-
-  \includegraphics[height=3cm]{img/summerscenario-steamshovel}
-
-  YouTube video of the simulation:
-
-  \url{https://youtu.be/Wiu8CpVQn14}
-
-  \end{center}
-\end{frame}
+% \section{Facit \& questions}
+% \begin{frame}[fragile]{Facit \& questions}
+%
+%   \begin{itemize}
+%     \item The method is sensitive to the bubble-column position.
+%     \item The method is sensitive to the bubble-column radius or scattering length if the other is known.
+%     \item \textbf{Question:} Is there an independent method of determining bubble-column radius or scattering length in the Upgrade?
+%   \end{itemize}
+%
+%   \begin{columns}
+%     \begin{column}{0.5\textwidth}
+%       \vspace*{3mm}
+%       \includegraphics[width=\textwidth]{img/flasher-contours-martin}
+%
+%       \tiny SpiceHD study using direct hole-ice propagation, fitting the size and scattering length of the bubble column and the position of the optical modules relative to the column. Source: Rongen. Status and future of SpiceHD and DARD, Calibration Workshop August 2017.
+%     \end{column}
+%     \begin{column}{0.5\textwidth}
+%       \includegraphics[width=0.8\textwidth]{img/camera2018-01}
+%
+%       \vspace*{4mm}
+%       \tiny Swedish-camera images from 2018 still show a diffuse bubble column. Source: Resconi, Rongen, Krings. The Precision Optical CAlibration Module for IceCube-Gen2: First Prototype. 2017.
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+%
+% \section{Next steps}
+% \begin{frame}[fragile]{Next step: More realistic simulation scenario}
+%   \begin{itemize}
+%     \item New scenario: Still count hits at receiving DOM and check if sensitive to the bubble-column position and strength, but start photons from near POCAMs rather than from plane waves.
+%     \item \textbf{Question}: Is there a POCAM photon source in IceTray?
+%     \item \textbf{Question}: Where can I get the coordinates of the proposed POCAMs?
+%   \end{itemize}
+%   \includegraphics[width=0.9\textwidth]{img/pocamscenario}
+%
+%   \tiny For a follow up on this, see \url{https://github.com/fiedl/hole-ice-study/issues/118}.
+% \end{frame}
+%
+% \section{}
+% \begin{frame}[fragile]{Thanks for your attention!}
+%   \begin{center}
+%   Any input you might have is welcome: \\ \vspace{0.3cm}
+%
+%   \url{https://github.com/fiedl/hole-ice-study/issues/117} \\
+%   \url{https://github.com/fiedl/hole-ice-study/issues/118} \\ \vspace{0.1cm}
+%
+%   Slack:
+%   \href{https://icecube-spno.slack.com/messages/@U092MBFU2}{\texttt{@fiedl}}
+%
+%   \vspace{1.5cm}
+%
+%   \includegraphics[height=3cm]{img/summerscenario-steamshovel}
+%
+%   YouTube video of the simulation:
+%
+%   \url{https://youtu.be/Wiu8CpVQn14}
+%
+%   \end{center}
+% \end{frame}
