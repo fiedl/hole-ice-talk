@@ -45,7 +45,7 @@ end
 
 task :compile => [:dependencies, :includeonly, :markdown] do
   log.section "pdflatex"
-  sh "cd #{base_path} && #{pdflatex_command} #{main_tex_file}"
+  sh "cd #{base_path} && #{pdflatex_command} #{main_tex_file} || echo 'some issues did occur during latex compilation'"
 end
 
 if include_only_a_part?
