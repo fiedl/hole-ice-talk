@@ -9,11 +9,11 @@
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
-\title[Hole Ice, Cables, and Non-Spherical Detector Modules in Light-Propagation Simulations]{Hole Ice, Cables, and Non-Spherical Detector Modules in Light-Propagation Simulations}
-\subtitle{IceCube Collaboration Spring Meeting 2021 (Virtual) \\ Session Calibration I}
-\date{2021-03-18 \\ \vspace*{2mm}\tiny{Document 2021-ieSoo3ie} \normalsize}
+\title[Direct Hole Ice and Cable Shadows | IceCube Photon-Propagator Workshop October 2021]{Direct Hole Ice and Cable Shadows}
+\subtitle{IceCube Photon-Propagator Workshop October 2021}
+\date{2021-10-18 \\ \vspace*{2mm}\tiny{Document 2021-Phap0Ieb} \normalsize}
 
-\author[Sebastian Fiedlschuster, ECAP Erlangen, 2021-03-18]{Sebastian Fiedlschuster (\texttt{@fiedl}) \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
+\author[Sebastian Fiedlschuster, ECAP Erlangen, 2021-10-18]{Sebastian Fiedlschuster (\texttt{@fiedl}) \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
@@ -24,7 +24,7 @@
   \raisebox{-0.12cm}{\includegraphics[height=1cm]{img/icecube-logo-side-text}}\hspace{0.3cm}
   % \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/DESY_logo_3C_web}}\hspace{0.5cm}
   \raisebox{-0.1cm}{\includegraphics[height=1cm]{img/ecap}}\hspace{0.3cm}
-  \includegraphics[height=0.75cm]{img/Logo_FAU_DinA4_RGB}
+  \includegraphics[height=0.9cm]{img/logo-fau}
 \fi}
 
 \input{lib/graphics}
@@ -53,36 +53,43 @@
 
 %\section{Introduction}
   \include{text/prefix}
-  \include{text/icecube}
+%  \include{text/icecube}
   \include{text/motivation}
+  \include{text/how_does_it_look_like}
 %  \include{text/outline}
 
-\section{Photon-Propagation Algorithm}
-  \include{text/how_does_it_work}
+%\section{Photon-Propagation Algorithm}
+%   \include{text/how_does_it_work}
+  \include{text/algorithms_a_and_b}
 
-\section{Examples of Application}
-\subsection{Vary drill-hole ice properties}
-  \include{text/short_scattering_example}
-\subsection{Realistic geometry}
-  \include{text/nested_shifted_cylinders_with_cable}
-\subsection{POCAM Study}
-  \include{text/pocam}
-\subsection{Flasher Scan}
-%  \include{text/flasher_scan_steamshovel_example}
-  \include{text/flasher_parameter_scan}
-\subsection{DOM Types}
-  \include{text/dom_types}
-\subsection{Where does this tool fit in?}
-  \include{text/where_does_it_fit_in}
+% \section{Examples of Application}
+% \subsection{Vary drill-hole ice properties}
+%   \include{text/short_scattering_example}
+% \subsection{Realistic geometry}
+%   \include{text/nested_shifted_cylinders_with_cable}
+% \subsection{POCAM Study}
+%   \include{text/pocam}
+% \subsection{Flasher Scan}
+% %  \include{text/flasher_scan_steamshovel_example}
+%   \include{text/flasher_parameter_scan}
+% \subsection{DOM Types}
+%   \include{text/dom_types}
 
-\section{Status}
-  \include{text/status}
-\section{Results}
-  \include{text/results}
+\include{text/how_does_algorithm_b_work}
+\include{text/can_this_be_used_today}
+\include{text/can_this_help_today}
 
-%\section{Outlook}
-  %\include{text/next_steps}
-  \include{text/thanks}
+% \subsection{Where does this tool fit in?}
+   \include{text/where_does_it_fit_in}
+%
+% \section{Status}
+%   \include{text/status}
+% \section{Results}
+%   \include{text/results}
+%
+% %\section{Outlook}
+%   %\include{text/next_steps}
+   \include{text/thanks}
 
 \appendix
 \section{Backup slides}
@@ -122,23 +129,23 @@
   \include{text/flasher_scan_steamshovel_example}
   \include{text/flasher_parameter_scan}
   \include{text/cable_flasher}
-
-%\subsection{State of the hole-ice simulation}
-%  \include{text/checklist}
-
-%\subsection{Work to be done}
-%  \include{text/what_is_missing}
-%  \include{text/martins_wishlist}
-
-\subsection{DOM oversizing}
-  \include{text/dom_oversizing}
-
-\subsection{Azimuthal-angles study}
-  \include{text/azimuthal_angles}
-
-\subsection{Algorithm comparison}
-  \include{text/hole_ice_2017_vs_2018}
-
+%
+% %\subsection{State of the hole-ice simulation}
+% %  \include{text/checklist}
+%
+% %\subsection{Work to be done}
+% %  \include{text/what_is_missing}
+% %  \include{text/martins_wishlist}
+%
+% \subsection{DOM oversizing}
+%   \include{text/dom_oversizing}
+%
+% \subsection{Azimuthal-angles study}
+%   \include{text/azimuthal_angles}
+%
+% \subsection{Algorithm comparison}
+%   \include{text/hole_ice_2017_vs_2018}
+%
 \subsection{Comparison to ppc simulation}
   \include{text/ppc_comparison}
 \subsection{Comparison to H2 hole-ice model}

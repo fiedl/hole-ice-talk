@@ -1,0 +1,58 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{Approach A (naive)}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{distance-correction}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \her{Minimal extension} to existing kernel
+        \item Hole ice as \her{correction for each scattering step}
+        \item Pros:
+        \begin{itemize}
+          \item Small surface area of implementation
+          \item Standard \alert{clsim (well-tested) almost untouched}
+          \item Very testable using unit tests
+        \end{itemize}
+        \item Cons:
+        \begin{itemize}
+          \item Hole-ice \alert{properties relative} to bulk ice
+          \item Does \alert{not work with nested} cylinders
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \source{https://github.com/fiedl/hole-ice-study/issues/45}
+
+\end{frame}
+
+\begin{frame}[fragile]{Approach B (the one to go)}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \image{how-does-it-work-004}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Treat hole ice and cables as \alert{media with ice optical properties}
+        \item Generalize ice-layer algorithm
+        \item Pros:
+        \begin{itemize}
+          \item Supports \alert{nested cylinders} and \alert{cables}
+        \end{itemize}
+        \item Cons:
+        \begin{itemize}
+          \item Needed to \alert{rewrite} some of the existing propagation kernel
+          \item i.e. needed lots of \alert{statistical cross checks} to make sure everything works
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \source{https://github.com/fiedl/hole-ice-study/issues/45}
+
+\end{frame}
+

@@ -1,0 +1,48 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[fragile]{How approach B work?}
+
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \image{how-does-it-work-004}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+
+      \metroset{block=fill}
+      \begin{block}{Within standard clsim kernel}
+        \begin{itemize}
+          \setlength\itemsep{-0.5em}
+          \item Take current photon position
+          \item and properties of ice layers
+          \item Loop over layers
+          \item Calculate physical distance to next interaction
+        \end{itemize}
+      \end{block}
+
+      \vspace*{-1em}
+      \begin{center} $\Downarrow$ \end{center}
+      \vspace*{-1em}
+
+      \begin{block}{Replace with: \texttt{apply\_propagation\_through\_media}}
+        \begin{itemize}
+          \setlength\itemsep{-0.5em}
+          \item Take current photon position
+          \item Define arrays:\\
+            \texttt{distances\_to\_medium\_changes}\\
+            \texttt{local\_scattering\_lengths}\\
+            \texttt{local\_absorption\_lengths}
+          \item Add ice layers to these arrays
+          \item Add hole-ice and cable cylinders to these arrays
+          \item Sort arrays by ascending distance from photon
+          \item Loop over arrays
+          \item and calculate physical distance to next interaction
+        \end{itemize}
+      \end{block}
+
+
+    \end{column}
+  \end{columns}
+
+  \source{\newline https://github.com/fiedl/clsim/tree/sf/hole-ice-2018/resources/kernels/lib}
+
+\end{frame}
