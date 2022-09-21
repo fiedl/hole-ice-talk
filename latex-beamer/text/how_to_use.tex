@@ -1,0 +1,122 @@
+%!TEX TS-program = ../make.zsh
+
+\begin{frame}[t,fragile]{How can I configure the simulation?}
+  \begin{column}[t]{0.37\textwidth}
+    \begin{overlayarea}{\textwidth}{\textheight}
+      \only<1>{\image{config-example-steamshovel-0}}
+      \only<2>{\image{config-example-steamshovel-1}}
+      \only<3>{\image{config-example-steamshovel-2}}
+      \only<4-5>{\image{config-example-steamshovel-3}}
+      \only<6>{\image{config-example-steamshovel-4}}
+      
+      \vspace*{3cm}
+      README: \url{https://github.com/fiedl/hole-ice-scripts}
+    \end{overlayarea}
+  \end{column}
+  \begin{column}[t]{0.6\textwidth}
+    \vspace*{-14cm}
+    \begin{python}
+      from icecube.simclasses import I3CLSimMediumCylinder, I3CLSimMediumCylinderSeries
+    \end{python}
+    \begin{onlyenv}<2->
+      \begin{python}
+        drill_hole_cylinder = I3CLSimMediumCylinder()
+        drill_hole_cylinder.x = -256.14 + (0.30 - 0.16510) # m
+        drill_hole_cylinder.y = -521.08 # m
+        drill_hole_cylinder.radius = 0.30 # m
+        drill_hole_cylinder.scattering_length = 0.004 # m
+      \end{python}
+    \end{onlyenv}
+
+    \begin{onlyenv}<3->
+      \begin{python}
+        bubble_column_cylinder = I3CLSimMediumCylinder()
+        bubble_column_cylinder.x = -256.14 + (0.30 - 0.16510) # m
+        bubble_column_cylinder.y = -521.08 # m
+        bubble_column_cylinder.radius = 0.10 # m
+        bubble_column_cylinder.scattering_length = 0.001 # m
+      \end{python}
+    \end{onlyenv}
+
+    \begin{onlyenv}<4->
+      \begin{python}
+        cable_cylinder = I3CLSimMediumCylinder()
+        cable_cylinder.x = -256.14 + (0.16510 + 0.03) # m
+        cable_cylinder.y = -521.08 # m
+        cable_cylinder.top = 496.03 + 0.5 # m
+        cable_cylinder.bottom = 496.03 - 0.5 # m
+        cable_cylinder.radius = 0.03 # m
+        cable_cylinder.absorption_length = 0.0 # m
+      \end{python}
+    \end{onlyenv}
+    
+    \begin{onlyenv}<5->
+      \begin{python}
+        cylinders = I3CLSimMediumCylinderSeries([drill_hole_cylinder, bubble_column_cylinder, cable_cylinder])
+        geometry_frame.Put("I3CLSimMediumCylinders", cylinders)
+      \end{python}
+    \end{onlyenv}
+    
+  \end{column}
+\end{frame}
+
+\begin{frame}[t,fragile]{How can I configure the simulation? [WIP]}
+  \begin{column}[t]{0.37\textwidth}
+    \image{config-example-steamshovel-5}
+    
+    \vspace{0.5cm}
+    \only<3>{\image{dom_types_with_shapes}}
+
+  \end{column}
+  \begin{column}[t]{0.6\textwidth}
+    \vspace*{-5cm}
+    
+    \begin{onlyenv}<1>
+      \begin{python}
+        # work in progress:
+        
+        upper_pmt = I3CLSimMediumSphere()
+        upper_pmt.absorption_length = 0 # m
+        upper_pmt.detection_probability = 0.2
+        # ...
+        
+        lower_pmt = I3CLSimMediumSphere()
+        lower_pmt.absorption_length = 0 # m
+        lower_pmt.detection_probability = 0.2
+        # ...
+        
+        cylinder = I3CLSimMediumCylinder()
+        cylinder..absorption_length = 0 # m
+        # ...
+        
+        shapes = I3CLSimMediumShapeSeries([upper_pmt, lower_pmt, cylinder])
+        geometry_frame.Put("I3CLSimMediumShapes", shapes)
+      \end{python}
+    \end{onlyenv}
+    
+    \begin{onlyenv}<2->
+      \begin{python}
+        # work in progress:
+        
+        upper_pmt = I3CLSimMediumSphere()
+        upper_pmt.absorption_length = 0 # m
+        upper_pmt.detection_probability = 0.2
+        # ...
+        
+        lower_pmt = |\colorbox{yellow}{I3CLSimMediumSphere()}|
+        lower_pmt.absorption_length = 0 # m
+        lower_pmt.|\colorbox{yellow}{detection\_probability}| = 0.2
+        # ...
+        
+        cylinder = |\colorbox{yellow}{I3CLSimMediumCylinder()}|
+        cylinder..absorption_length = 0 # m
+        # ...
+        
+        shapes = I3CLSimMediumShapeSeries([upper_pmt, lower_pmt, cylinder])
+        geometry_frame.Put("I3CLSimMediumShapes", shapes)
+      \end{python}
+    \end{onlyenv}
+    
+  \end{column}
+\end{frame}
+

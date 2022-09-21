@@ -5,21 +5,25 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{overlayarea}{\textwidth}{\textheight}
+        \small
         \begin{itemize}
+          \setlength\itemsep{0.2em}
           \item<alert@1>[\done] Implement new ray-tracing algorithm
           \item<alert@2>[\done] Implement hole ice and cables
           \item<alert@3>[\done] Verify plausibility with examples
           \item<alert@4>[\done] Verify with statistical cross checks
-          \item<alert@5>[\done] Compare to effective descriptions
-          \item<alert@6>[\inprogress] Fix compatibility issues with
+          %\item<alert@5>[\done] Compare to effective descriptions
+          \item<alert@5>[\done] Bring interface up to date with current icetray %(September 2022)
+          \item<alert@6>[\done] Provide python-3 example scripts \& documentation
+          \item<alert@7>[\done] Provide steamshovel artists
+          \item<alert@8>[\inprogress] Fix compatibility issues with
           \begin{itemize}
-            \item[\inprogress] server-client-architecture rewrite
-            \item[\tobedone] ice anisotropy
-            \item[\tobedone] Unit-test framework
+            \item[\tobedone] ice tilt, ice anisotropy
+            \item[\tobedone] bfr
+            \item[\tobedone] direct detection
           \end{itemize}
-          \item<alert@7>[\tobedone] Implement detection-probability property
-          \item<alert@8>[\tobedone] Provide ready-to-use mDOM and D-Egg
-          \item<alert@9>[\tobedone] Provide python-3 example scripts \& documentation
+          \item<alert@9>[\tobedone] Convenient subclassing
+          \item<alert@10>[\tobedone] Implement detection-probability property
         \end{itemize}
       \end{overlayarea}
     \end{column}
@@ -40,31 +44,62 @@
 
         \tiny See also: \url{https://github.com/fiedl/hole-ice-study/issues/66}
       }%
+      %\only<5>{
+      %  \image{ppc-pocam-3}
+      %
+      %  \tiny See also: \url{https://github.com/fiedl/hole-ice-study/issues/4}, \url{https://github.com/fiedl/hole-ice-study/labels/comparison}
+      %
+      %  \normalsize
+      %  \vspace{2em}
+      %
+      %  \metroset{block=fill}
+      %  \begin{block}{Thesis \& previous talks}
+      %    %$\rightarrow$ Thesis \& previous talks: \\
+      %    \url{https://arxiv.org/abs/1904.08422} \\
+      %    \scriptsize \url{https://github.com/fiedl/hole-ice-talk/releases}
+      %  \end{block}
+      %}%
       \only<5>{
-        \image{ppc-pocam-3}
-
-        \tiny See also: \url{https://github.com/fiedl/hole-ice-study/issues/4}, \url{https://github.com/fiedl/hole-ice-study/labels/comparison}
-
-        \normalsize
-        \vspace{2em}
-
+        Ported to icetray main branch of September 2022.
+        
+        \vspace{1.5cm}
+        
         \metroset{block=fill}
-        \begin{block}{Thesis \& previous talks}
-          %$\rightarrow$ Thesis \& previous talks: \\
-          \url{https://arxiv.org/abs/1904.08422} \\
-          \scriptsize \url{https://github.com/fiedl/hole-ice-talk/releases}
+        \begin{block}{Pull request draft}
+          \url{https://github.com/icecube/icetray/pull/2957}
         \end{block}
-
+      
       }%
-      \only<6>{Currently resolving technical issues due to major rewrite of the underlying tool.}%
-      \only<7-8>{Next step: For ray-tracing, each geometric object (cylinders, spheres, \dots) can have a probability to detect the photon on interaction (absorption, scattering). This can be used to model the photo-sensitive areas of a detector module.}
-      \only<8>{
-        \vspace{1em}
-        Then: Read detector-module type from simulation configuration and place corresponding preset at the position of the module.
+      \only<6>{
+        Example scripts for new interface:
+        \vspace{1cm}
+        
+        \metroset{block=fill}
+        \begin{block}{Repository}
+          \url{https://github.com/fiedl/hole-ice-scripts}
+        \end{block}
+      }%
+      \only<7>{%
+        Ready-to-use steamshovel artists included in pull request.
+        \vspace{1cm}
 
-        \centering\vspace{1em}
-        \includegraphics[width=0.8\textwidth]{img/d-egg_approximation}
+        \image{config-example-steamshovel-3}
       }
+      \only<9>{%
+        \small\hspace*{-2cm}\vspace*{-1cm}
+        \begin{forest}
+          [I3CLSimMediumShape
+            [I3CLSimMediumSphere]
+            [I3CLSimMediumCylinder
+              [I3CLSimHoleIceCylinder]
+              [I3CLSimCableCylinder]
+            ]
+          ]
+        \end{forest}
+      }%
+      \only<10>{%
+        \image{dom_types_with_shapes}
+      }%
     \end{column}
   \end{columns}
 

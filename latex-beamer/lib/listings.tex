@@ -17,6 +17,13 @@
 \newenvironment{python}{\minted{python}}{\endminted}
 \newcommand\pythoninput[1]{\inputminted{python}{#1}}
 
+\setminted[python]{
+  linenos=false,
+  frame=none,
+  fontsize=\footnotesize,
+  escapeinside=||
+}
+
 \newenvironment{ccode}{\minted{c}}{\endminted}
 
 \setminted[bash]{

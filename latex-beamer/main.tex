@@ -9,11 +9,11 @@
 %\geometry{paperwidth=\mypaperwidth,paperheight=0.625\mypaperwidth} % 16:10
 \geometry{paperwidth=\mypaperwidth,paperheight=0.7\mypaperwidth}
 
-\title[Direct Hole Ice and Cable Shadows | IceCube Photon-Propagator Workshop October 2021]{Direct Hole Ice and Cable Shadows}
-\subtitle{IceCube Photon-Propagator Workshop October 2021}
-\date{2021-10-18 \\ \vspace*{2mm}\tiny{Document 2021-Phap0Ieb} \normalsize}
+\title[Update on Direct Hole-Ice Simulations With Clsim | Madison Collaboration Meeting 2022]{Update on Direct Hole-Ice Simulations With Clsim}
+\subtitle{IceCube Fall Collaboration Meeting Madison 2022}
+\date{2022-09-21 \\ \vspace*{2mm}\tiny{Document 2022-uch8wuS7} \normalsize}
 
-\author[Sebastian Fiedlschuster, ECAP Erlangen, 2021-10-18]{Sebastian Fiedlschuster (\texttt{@fiedl}) \\ \tiny{\url{https://github.com/fiedl/hole-ice-study}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
+\author[Sebastian Fiedlschuster, ECAP Erlangen, 2022-09-21]{Work by: Tianlu Yuan \& Sebastian Fiedlschuster \vspace*{5mm} \\ Talk by: Sebastian Fiedlschuster (\texttt{@fiedl}) \\ \tiny{\url{https://github.com/fiedl/hole-ice-scripts}} \\ \tiny\texttt{sebastian.fiedlschuster@fau.de}}
 \institute{Erlangen Centre for Astroparticle Physics}
 
 \newif\ifplacelogo % create a new conditional
@@ -51,43 +51,50 @@
 
 \placelogofalse
 
-%\section{Introduction}
-  \include{text/prefix}
-%  \include{text/icecube}
-  \include{text/motivation}
-  \include{text/how_does_it_look_like}
-%  \include{text/outline}
+% \section{Introduction}
+\include{text/prefix}
+% %  \include{text/icecube}
+\include{text/motivation}
+%   \include{text/how_does_it_look_like}
+\include{text/outline}
+% 
+% \include{text/algorithms_a_and_b}
+% 
+\section{What can it do: Examples of Application}
+\subsection{Vary drill-hole ice properties}
+  \include{text/short_scattering_example}
+\subsection{Realistic geometry}
+  \include{text/nested_shifted_cylinders_with_cable}
+%\subsection{POCAM Study}
+%  \include{text/pocam}
+%\subsection{Flasher Scan}
+%%  \include{text/flasher_scan_steamshovel_example}
+%  \include{text/flasher_parameter_scan}
+%\subsection{DOM Types}
+%  \include{text/dom_types}
 
-\include{text/algorithms_a_and_b}
+% \section{How does it work?}
+%   \include{text/how_does_algorithm_b_work}
 
-% \section{Examples of Application}
-% \subsection{Vary drill-hole ice properties}
-%   \include{text/short_scattering_example}
-% \subsection{Realistic geometry}
-%   \include{text/nested_shifted_cylinders_with_cable}
-% \subsection{POCAM Study}
-%   \include{text/pocam}
-% \subsection{Flasher Scan}
-% %  \include{text/flasher_scan_steamshovel_example}
-%   \include{text/flasher_parameter_scan}
-% \subsection{DOM Types}
-%   \include{text/dom_types}
+\section{How can I use it?}
+  \include{text/how_to_use}
 
-\include{text/how_does_algorithm_b_work}
-\include{text/can_this_be_used_today}
-\include{text/can_this_help_today}
+\section{Performance}
+  \include{text/performance}
 
-% \subsection{Where does this tool fit in?}
-   \include{text/where_does_it_fit_in}
-%
-% \section{Status}
-%   \include{text/status}
-% \section{Results}
-%   \include{text/results}
-%
-% %\section{Outlook}
-%   %\include{text/next_steps}
-   \include{text/thanks}
+\section{Where does this tool fit in?}
+  \include{text/where_does_it_fit_in}
+  %\include{text/can_this_help_today}
+
+\section{Status}
+  \include{text/status}
+
+%\section{Results}
+%  \include{text/results}
+
+%\section{Outlook}
+%\include{text/next_steps}
+\include{text/thanks}
 
 \appendix
 \section{Backup slides}
@@ -96,7 +103,8 @@
   \include{text/what_is_hole_ice}
 
 \section{Photon-Propagation Algorithm}
-   \include{text/how_does_it_work}
+  \include{text/how_does_it_work}
+  \include{text/how_does_algorithm_b_work}
 
 \subsection{Performance considerations}
   \include{text/performance_medium_changes}
@@ -115,7 +123,7 @@
   \include{text/simulation_step_flow_chart}
 
 \subsection{Cross checks}
-  \include{text/instant_absorption}
+  %\include{text/instant_absorption}
   \include{text/containment_example}
   \include{text/absorption_after_5cm}
   \include{text/cross_checks}
